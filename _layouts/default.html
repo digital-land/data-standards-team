@@ -16,6 +16,8 @@
 
     <!-- include govuk frontend stylesheet -->
     <link rel="stylesheet" href="{{ site.settings.govukAssetPath }}/govuk-frontend-4.5.0.min.css">
+    <!-- include local stylesheet -->
+    <link rel="stylesheet" href="/assets/css/application.css">
 
   </head>
   <body class="govuk-template__body">
@@ -26,7 +28,7 @@
     {% include govuk-header.html %}
 
     <div class="govuk-width-container">
-      <main class="govuk-main-wrapper" id="main-content" role="main">
+      <main class="govuk-main-wrapper markdown-content" id="main-content" role="main">
         {{ content }}
       </main>
     </div>

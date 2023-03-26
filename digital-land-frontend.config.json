@@ -1,0 +1,6 @@
+{
+  "scssPath": "./src/scss",
+  "jsOutputPath": "assets/js",
+  "stylesheetsOutputPath": "assets/css",
+  "watchPaths": "'./src/scss/**/*.scss' './src/javascripts/**/*.js'"
+}

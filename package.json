@@ -1,0 +1,28 @@
+{
+  "name": "data-standards-team-site",
+  "version": "0.0.1",
+  "description": "A tool to help manage the data in the digital land platform",
+  "scripts": {
+    "build:css": "npm run nps build.stylesheets",
+    "build:js": "npm run nps build.javascripts",
+    "build": "npm-run-all --parallel build:*",
+    "watch:assets": "npm run nps watch.assets",
+    "watch": "npm-run-all --parallel watch:*",
+    "nps": "nps -c ./node_modules/digital-land-frontend/package-scripts.js",
+    "postinstall": "npm run nps copy.javascripts && npm run nps build.stylesheets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-land/data-standards-team"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "digital-land-frontend": "https://gitpkg.now.sh/digital-land/digital-land-frontend/package?main",
+    "govuk-frontend": "^4.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "standardx": "^7.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+// import all digital land and GOVUK Frontend scss
+@import "digital-land-frontend/dl-frontend";
+
+.markdown-content {
+  h1 {
+    @extend .govuk-heading-xl;
+  }
+}

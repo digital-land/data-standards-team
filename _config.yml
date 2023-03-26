@@ -6,7 +6,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 domain: ""
 
-exclude: [src, node_modules, package*, Gemfile*]
+exclude: [src, node_modules, package*, Gemfile*, digital-land-frontend.config.json]
 
 # Build settings
 markdown: kramdown
