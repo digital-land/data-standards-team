@@ -1,0 +1,26 @@
+
+email: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+domain: ""
+
+exclude: [src, node_modules, package*, Gemfile*]
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
+
+settings:
+  govukAssetPath: "/assets/govuk-frontend"
