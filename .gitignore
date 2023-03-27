@@ -6,3 +6,5 @@ _site/
 Gemfile.lock
 node_modules
 package-lock.json
+
+.DS_Store
