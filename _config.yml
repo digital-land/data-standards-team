@@ -23,4 +23,5 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 settings:
+  name: "Data Standards"
   govukAssetPath: "/assets/govuk-frontend"
