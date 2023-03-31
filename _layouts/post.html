@@ -1,0 +1,17 @@
+{% include templateStart.html %}
+
+<div class="govuk-width-container">
+  <a href="/{{ site.baseurl }}weeknote" class="govuk-back-link">Back to weeknotes</a>
+
+  <main class="govuk-main-wrapper markdown-content" id="main-content" role="main">
+
+      <h1 class="govuk-heading-xl">{{ page.title }}</h1>
+
+      <div class="markdown-content">
+        {{ content }}
+      </div>
+
+  </main>
+</div>
+
+{% include templateEnd.html %}

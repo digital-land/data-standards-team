@@ -1,20 +1,26 @@
 {% include templateStart.html %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1>{{ page.title }}</h1>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper markdown-content" id="main-content" role="main">
 
-    <ul class="govuk-list govuk-list--bullet">
-      {% assign subpages=site.categories[page.category]  %}
-      {% for post in subpages %}
-      <li><a class="govuk-link" href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-    
-    <div class="app-markdown-output">
-      {{ content }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1>{{ page.title }}</h1>
+
+        <ul class="govuk-list govuk-list--bullet">
+          {% assign subpages=site.categories[page.category]  %}
+          {% for post in subpages %}
+          <li><a class="govuk-link" href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+        
+        <div class="app-markdown-output">
+          {{ content }}
+        </div>
+      </div>
     </div>
-  </div>
+
+  </main>
 </div>
 
 {% include templateEnd.html %}
