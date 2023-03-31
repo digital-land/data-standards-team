@@ -3,7 +3,7 @@ layout: default
 hidetitle: True
 ---
 
-# Data standards team
+# Data Standards team
 
 The Data Standards team are creating data standards for planning.
 
