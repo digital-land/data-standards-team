@@ -10,7 +10,7 @@
         <ul class="govuk-list govuk-list--bullet">
           {% assign subpages=site.categories[page.category]  %}
           {% for post in subpages %}
-          <li><a class="govuk-link" href="{{ post.url }}">{{ post.title }}</a></li>
+          <li><a class="govuk-link" href="{% if site.baseurl != '' %}/{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
         </ul>
         
