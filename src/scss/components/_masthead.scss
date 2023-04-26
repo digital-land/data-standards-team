@@ -1,0 +1,18 @@
+.app-masthead {
+  padding-top: 0;
+  color: #ffffff;
+  background-color: #012169;
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
+  &::after,
+  &::before {
+      content: ' ';
+      display: table;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+}

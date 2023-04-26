@@ -38,3 +38,5 @@ gem "kramdown-parser-gfm"
 
 
 gem "webrick", "~> 1.7"
+
+gem "govuk_publishing_components"
