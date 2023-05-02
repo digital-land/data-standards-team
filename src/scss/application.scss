@@ -5,6 +5,7 @@ $baseurl: "/data-standards"!default;
 $dl-frontend-fonts-path: "#{$baseurl}/assets/govuk-frontend/assets/fonts/";
 $dl-frontend-images-path: "#{$baseurl}/assets/govuk-frontend/assets/images/";
 @import "digital-land-frontend/dl-frontend";
+@import "govuk-extensions";
 
 // ########################################################
 // components for this app/website

@@ -45,6 +45,9 @@
   p {
     @extend %govuk-body-m;
     max-width: 40rem;
+    &.govuk-body-l {
+      @extend %govuk-body-l;
+    }
   }
 
   strong,

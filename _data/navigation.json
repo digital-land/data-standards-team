@@ -1,0 +1,52 @@
+[
+  {
+    "title": "How we work",
+    "links": [
+      {
+        "url": "#",
+        "text": "What is a data standard",
+        "description": "What we mean by a standard for planning data. Our definition."
+      },
+      {
+        "url": "#",
+        "text": "How we develop a data standard",
+        "description": "The process we follow to define a standard for planning and housing data."
+      },
+      {
+        "url": "#",
+        "text": "Working with Local Planning Authorities",
+        "description": "How we work together with local planning authorities to produce data."
+      }
+    ]
+  },
+  {
+    "title": "What we're working on",
+    "links": [
+      {
+        "url": "#",
+        "text": "Roadmap",
+        "description": "Find out about the data standards we're working on and planning to develop"
+      },
+      {
+        "url": "#",
+        "text": "Weeknotes",
+        "description": "Follow our progress by reading our weekly updates."
+      }
+    ]
+  },
+  {
+    "title": "Support and resources",
+    "links": [
+      {
+        "url": "#",
+        "text": "Roadmap",
+        "description": "Find out about the data standards we're working on and planning to develop"
+      },
+      {
+        "url": "#",
+        "text": "Weeknotes",
+        "description": "Follow our progress by reading our weekly updates."
+      }
+    ]
+  }
+]

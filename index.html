@@ -1,0 +1,50 @@
+---
+layout: default
+navigation:
+  - title: What we're working on
+    links:
+      - url: '#'
+        text: Weeknotes
+        description: Follow our progress by reading our weekly updates.
+---
+
+<p class="govuk-body govuk-body-l">We work within the planning directorate creating data standards for planning.</p>
+
+<p>This process includes:</p>
+
+<ul>
+  <li>opening up the planning system through data</li>
+  <li>discovering what planning processes can be modelled in data</li>
+  <li>learning how to scale our processes</li>
+  <li>building data capability within dluhc and local planning authorities</li>
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+{% if page.navigation %}
+  {% for section in page.navigation %}
+    <div class="app-cards">
+      {% if section.title %}
+        <h2 class="app-cards__heading govuk-heading-m">{{ section.title }}</h2>
+      {% endif %}
+      {% if section.links %}
+        <ul class="app-cards__list" data-track-count="cardList">
+          {% for link in section.links %}
+            <li class="app-cards__list-item">
+              <div class="app-cards__list-item-wrapper">
+                <h3 class="app-cards__sub-heading govuk-heading-s">
+                  <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ link.url }}">{{ link.text }}</a>
+                </h3>
+                {% if link.description %}                  
+                  <p class="govuk-body app-cards__description">
+                    {{ link.description }}
+                  </p>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endif %}
