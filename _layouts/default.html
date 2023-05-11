@@ -1,19 +1,19 @@
 ---
 layout: base
-hero:
-  title: "Data Standards"
+markdown: True
 ---
 {% if page.hero or layout.hero %}
   <!-- hero component here -->
   <div class="app-masthead">
     <div class="govuk-width-container">
-      <h2 class="govuk-heading-xl app-masthead__title">
+      {% assign headingLevel = page.hero.headinglevel | default: layout.hero.headinglevel | default: "h2" %}
+      <{{ headingLevel }} class="govuk-heading-xl app-masthead__title">
         {% if page.hero.title %}
           {{ page.hero.title }}
         {% elsif layout.hero.title %}
           {{ layout.hero.title }}
         {% endif %}
-      </h2>
+      </{{ headingLevel }}>
     </div>
   </div>
 {% endif %}
@@ -23,7 +23,7 @@ hero:
       {% if page.backlink %}{{ page.backlink.text }}{% else %}{{ layout.backlink.text }}{% endif %}
     </a>
   {% endif %}
-  <main class="govuk-main-wrapper markdown-content" id="main-content" role="main">
-    {{ content }}
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    {{ content  }}
   </main>
 </div>

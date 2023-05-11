@@ -1,5 +1,6 @@
 [
   {
+    "title": "How we work",
     "links": [
       {
         "url": "/about/what-is-a-data-standard",
@@ -15,7 +16,12 @@
         "url": "#",
         "text": "Working with Local Planning Authorities",
         "description": "How we work together with local planning authorities to produce data."
-      },
+      }
+    ]
+  },
+  {
+    "title": "Roadmap",
+    "links": [
       {
         "url": "/roadmap/",
         "text": "Our roadmap",
@@ -32,11 +38,6 @@
             "description": "Data Standards we are planning to work on"
           }
         ]
-      },
-      {
-        "url": "/weeknote/",
-        "text": "Weeknotes",
-        "description": "Weekly updates and working in the open from our team"
       }
     ]
   }

@@ -1,29 +1,21 @@
 ---
+title: Home
 layout: default
-navigation:
-  - title: What we're working on
-    links:
-      - url: 'weeknote/'
-        text: Weeknotes
-        description: Follow our progress by reading our weekly updates.
+markdown: False
+hero:
+  title: "Data Standards"
 ---
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body-l">Understand how data standards for planning and housing are developed by The Department for Levelling Up, Housing and Communities.</p>
+  </div>
+</div>
 
-<p class="govuk-body govuk-body-l">We work within the planning directorate creating data standards for planning.</p>
+<hr class="govuk-section-break govuk-section-break--m">
 
-<p>This process includes:</p>
-
-<ul>
-  <li>opening up the planning system through data</li>
-  <li>discovering what planning processes can be modelled in data</li>
-  <li>learning how to scale our processes</li>
-  <li>building data capability within dluhc and local planning authorities</li>
-</ul>
-
-<hr class="govuk-section-break govuk-section-break--visible">
-
-{% if page.navigation %}
-  {% for section in page.navigation %}
-    <div class="app-cards">
+{% if page.navigation or site.data.navigation %}
+  {% for section in site.data.navigation %}
+    <div class="app-cards govuk-!-margin-bottom-8">
       {% if section.title %}
         <h2 class="app-cards__heading govuk-heading-m">{{ section.title }}</h2>
       {% endif %}
@@ -33,7 +25,7 @@ navigation:
             <li class="app-cards__list-item">
               <div class="app-cards__list-item-wrapper">
                 <h3 class="app-cards__sub-heading govuk-heading-s">
-                  <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ link.url }}">{{ link.text }}</a>
+                  <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
                 </h3>
                 {% if link.description %}                  
                   <p class="govuk-body app-cards__description">

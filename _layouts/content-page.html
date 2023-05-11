@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+
+  {% if page.navigation or site.data.navigation %}
+    <nav class="app-sub-navigation" aria-labelledby="sub-navigation-heading">
+      <h2 class="govuk-visually-hidden" >{{ "Pages in this section" }}</h2>
+      {% for section in site.data.navigation %}
+        {% if section.title %}
+          <h3 class="app-sub-navigation__theme">{{ section.title }}</h3>
+        {% endif %}
+        {% if section.links %}
+          <ul class="app-sub-navigation__section">
+            {% for link in section.links %}
+              <li class="app-sub-navigation__section-item app-sub-navigation__section-item--current">
+                <a class="app-sub-navigation__link" href="{{ site.baseurl }}{{ link.url }}"  aria-current="true">{{ link.text }}</a>
+                  {% if link.children %}
+                    <ul class="app-sub-navigation__section app-sub-navigation__section--nested">
+                      {% for child in link.children %}                        
+                        <li class="app-sub-navigation__section-item">
+                          <a class="app-sub-navigation__link" href="{{ child.url }}" aria-current="true">{{ child.text }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}    
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    {% if page.markdown == True %}
+      <div class="app-main-wrapper markdown-content">
+        {{ content }}
+      </div>
+    {% elsif layout.markdown == True %}
+      <div class="app-main-wrapper markdown-content">
+        {{ content }}
+      </div>
+    {% else condition %}
+      {{ content }}  
+    {% endif %}
+  </div>
+</div>
