@@ -3,33 +3,33 @@
     "links": [
       {
         "url": "/about/what-is-a-data-standard",
-        "text": "What is a data standard",
-        "description": "What we mean by a standard for planning data. Our definition."
+        "text": "What we mean by a data standard",
+        "description": "Our definition of a data standard for planning"
       },
       {
         "url": "#",
         "text": "How we develop a data standard",
-        "description": "The process we follow to define a standard for planning and housing data."            
+        "description": "The process we follow to create standards for planning and housing data"            
       },
       {
         "url": "#",
-        "text": "Working with Local Planning Authorities",
-        "description": "How we work together with local planning authorities to produce data."
+        "text": "Working with local planning authorities",
+        "description": "How we work together with local planning authorities to produce data"
       },
       {
         "url": "/roadmap/",
         "text": "Our roadmap",
-        "description": "What we mean by a standard for planning data. Our definition.",
+        "description": "A roadmap of the work we are doing now, next and in the future",
         "children": [
           {
             "url": "#",
             "text": "In progress",
-            "description": "Data Standards we are currently working on"            
+            "description": "Data standards that we are currently working on"            
           },
           {
             "url": "#",
             "text": "Backlog",
-            "description": "Data Standards we are planning to work on"
+            "description": "Data standards we are planning to work on next"
           }
         ]
       },
