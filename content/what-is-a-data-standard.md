@@ -1,5 +1,5 @@
 ---
-title: What we mean by Data Standard
+title: What we mean by a data standard
 permalink: /about/:basename
 layout: content-page
 ---
