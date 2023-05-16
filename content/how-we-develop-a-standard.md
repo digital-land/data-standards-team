@@ -8,7 +8,7 @@ layout: content-page
 
 If you think you need a data standard, we need you to be able to answer some questions for us upfront.
 
-We need to know first:
+What we need to know first:
 * what do people want to use the data for?
 * which questions do people want the data to answer for them?
 * who will use the data?
