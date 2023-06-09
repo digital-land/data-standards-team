@@ -9,3 +9,6 @@ serve::
 
 build-css:
 	npm run build:css
+
+roadmap-page: 
+	python _bin/generate_roadmap.py
