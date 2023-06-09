@@ -17,21 +17,9 @@
         "description": "How we work together with local planning authorities to produce data"
       },
       {
-        "url": "/roadmap/",
-        "text": "Our roadmap",
-        "description": "A roadmap of the work we are doing now, next and in the future",
-        "children": [
-          {
-            "url": "#",
-            "text": "In progress",
-            "description": "Data standards that we are currently working on"            
-          },
-          {
-            "url": "#",
-            "text": "Backlog",
-            "description": "Data standards we are planning to work on next"
-          }
-        ]
+        "url": "/what-we-are-working-on/",
+        "text": "What we are working on",
+        "description": "An overview of the work we are doing now, next and in the future"
       },
       {
         "url": "/weeknote/",

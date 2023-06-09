@@ -1,15 +1,49 @@
-{% extends 'digital-land-frontend/layouts/base.jinja' %}
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>Planning data you can find, use and trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{%- block stylesheets %}
-{{ super() }}
+    
+  <link rel="shortcut icon" sizes="48x48" href="https://digital-land.github.io//images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" sizes="32x32" href="https://digital-land.github.io//images/favicon-32x32.png" type="image/png">
+  <link rel="shortcut icon" sizes="16x16" href="https://digital-land.github.io//images/favicon-16x16.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://digital-land.github.io//images/apple-touch-icon.png">
+
+
+    
+	<meta name="digital-land:template" content="digital-land-frontend/base.jinja">
+    
+    
+
+    <link href="https://digital-land.github.io//stylesheets/dl-frontend.css" rel="stylesheet" />
+    
 <link href="/data-standards/assets/css/application.css" rel="stylesheet" />
-{% endblock stylesheets -%}
 
-{% block header %}
+
+    
+    
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+      
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+    
+
+    
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="app-header__container govuk-header__container govuk-width-container">
     <div class="app-header__logo govuk-header__logo">
-      <a href="{{ baseurl }}/" class="govuk-header__link govuk-header__link--homepage">
+      <a href="/data-standards/" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <span class="govuk-header__logotype-text">
             DLUHC
@@ -20,13 +54,15 @@
     </div>
   </div>
 </header>
-{% endblock header %}
 
-{% block beforeContent %}
-<a href="{{ baseurl }}/" class="govuk-back-link">Back to data standards home</a>
-{% endblock beforeContent %}
 
-{% block content %}
+    
+      <div class="govuk-width-container ">
+        
+<a href="/data-standards/" class="govuk-back-link">Back to data standards home</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
 
@@ -43,20 +79,46 @@
     <p class="govuk-body">If you'd like to help us explore and shape these standards, join the conversation to see what needs to figure out.</p>
 
     <dl class="govuk-summary-list">
-      {% for concern in concerns['In development'] %}
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          Design codes
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
+          Geographical areas covered by a design code
         </dd>
           <dd class="govuk-summary-list__actions govuk-!-text-align-left">
               <a class="govuk-link" href="#">
-              Discuss {{ concern['Concern'] }}</a>
+              Discuss Design codes</a>
           </dd>
       </div>
-      {% endfor %}
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Development plans and timetables
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+          <dd class="govuk-summary-list__actions govuk-!-text-align-left">
+              <a class="govuk-link" href="#">
+              Discuss Development plans and timetables</a>
+          </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Planning applications & decisions
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+          <dd class="govuk-summary-list__actions govuk-!-text-align-left">
+              <a class="govuk-link" href="#">
+              Discuss Planning applications & decisions</a>
+          </dd>
+      </div>
+      
     </dl>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">Researching</h2>
@@ -64,20 +126,20 @@
     <p class="govuk-body">If you'd like to help us understand the data needs for these planning areas, join the conversation to see what we trying to find out.</p>
 
     <dl class="govuk-summary-list">
-      {% for concern in concerns['Discovery'] %}
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          Planning conditions & constraints
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
+          
         </dd>
           <dd class="govuk-summary-list__actions govuk-!-text-align-left">
               <a class="govuk-link" href="#">
-              Discuss {{ concern['Concern'] }}</a>
+              Discuss Planning conditions & constraints</a>
           </dd>
       </div>
-      {% endfor %}
+      
     </dl>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">Next priorities</h2>
@@ -85,29 +147,58 @@
     <p class="govuk-body">We believe these planning areas we should look at next and we'd like your input to help us understand the space. We are particularly interested to here about the data used or produced, who needs to use it and what do they want to do with it.</p>
 
     <dl class="govuk-summary-list">
-      {% for concern in concerns['Next'] %}
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          Flood risk zones 2
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
+          
         </dd>
           <dd class="govuk-summary-list__actions govuk-!-text-align-left">
               <a class="govuk-link" href="#">
-              Discuss {{ concern['Concern'] }}</a>
+              Discuss Flood risk zones 2</a>
           </dd>
       </div>
-      {% endfor %}
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Flood risk zones 3
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+          <dd class="govuk-summary-list__actions govuk-!-text-align-left">
+              <a class="govuk-link" href="#">
+              Discuss Flood risk zones 3</a>
+          </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Site allocations
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+          <dd class="govuk-summary-list__actions govuk-!-text-align-left">
+              <a class="govuk-link" href="#">
+              Discuss Site allocations</a>
+          </dd>
+      </div>
+      
     </dl>
 
   </div>
 </div>
 
 
-{% endblock content %}
 
-{% block footer %}
+        </main>
+      </div>
+    
+
+    
 <footer class="govuk-footer " role="contentinfo">
   <div class="govuk-width-container ">
     <div class="govuk-footer__meta">
@@ -140,4 +231,39 @@
     </div>
   </div>
 </footer>
-{% endblock footer %}
+
+
+    
+  
+
+  
+    
+    <script src="https://digital-land.github.io//javascripts/digital-land-cookies.js"></script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+
+    
+    
+    
+    
+    <script src="https://digital-land.github.io//javascripts/govuk/govuk-frontend.js"></script>
+    <script>
+      // initiate all GOVUK components
+      window.GOVUKFrontend.initAll();
+    </script>
+    
+
+    
+    <script src="https://digital-land.github.io//javascripts/digital-land-frontend.js"></script>
+    <script>
+      window.DLFrontend.initAll();
+    </script>
+    
+
+    
+  
+
+  
+
+  </body>
+</html>
