@@ -10,5 +10,8 @@ serve::
 build-css:
 	npm run build:css
 
+fetch-backlog-data: 
+	python _bin/fetch_backlog.py
+
 roadmap-page: 
 	python _bin/generate_roadmap.py
