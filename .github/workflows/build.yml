@@ -42,5 +42,5 @@ jobs:
     - name: Output git status
       run: make status
 
-    - name: Commit docs
-      run: make commit-docs
+    - name: Commit roadmap pages
+      run: make commit-roadmap
