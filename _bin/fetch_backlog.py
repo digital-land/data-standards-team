@@ -1,7 +1,10 @@
 import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from dotenv import load_dotenv
 import pandas as pd
+
+load_dotenv()
 
 # Load the credentials from the JSON file
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -10,7 +13,7 @@ google_credentials = {
   "type": "service_account",
   "project_id": "data-standards-389209",
   "private_key_id": os.getenv("GOOGLE_PRIVATE_KEY_ID"),
-  "private_key": os.getenv("GOOGLE_PRIVATE_KEY"),
+  "private_key": os.getenv("GOOGLE_PRIVATE_KEY").replace('\\n', '\n'),
   "client_email": os.getenv("GOOGLE_CLIENT_EMAIL"),
   "client_id": os.getenv("GOOGLE_CLIENT_ID"),
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -20,7 +23,7 @@ google_credentials = {
   "universe_domain": "googleapis.com"
 }
 
-gc = gspread.service_account()
+gc = gspread.service_account_from_dict(google_credentials)
 
 # Open the worksheet by its title
 spreadsheet = gc.open('The grid')
