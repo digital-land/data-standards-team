@@ -1,11 +1,13 @@
 # current git branch
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
-init::
+python-init::
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
-	bundle install
 	npm install
+
+init:: python-init
+	bundle install
 
 serve::
 	bundle exec jekyll serve

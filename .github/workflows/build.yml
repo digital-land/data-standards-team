@@ -33,8 +33,8 @@ jobs:
         git remote set-url origin https://${DLB_BOT_USERNAME}:${DLB_BOT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         git checkout main
 
-    - name: Install dependencies
-      run: make init
+    - name: Install build dependencies
+      run: make python-init
 
     - name: Build roadmap pages
       run: make roadmap-page
