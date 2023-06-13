@@ -1,13 +1,24 @@
+import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
 # Load the credentials from the JSON file
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-# credentials = ServiceAccountCredentials.from_json_keyfile_name('data-standards-389209-6bf7855d074f.json', scope)
 
-# Authorize the client
-# client = gspread.authorize(credentials)
+google_credentials = {
+  "type": "service_account",
+  "project_id": "data-standards-389209",
+  "private_key_id": os.getenv("GOOGLE_PRIVATE_KEY_ID"),
+  "private_key": os.getenv("GOOGLE_PRIVATE_KEY"),
+  "client_email": os.getenv("GOOGLE_CLIENT_EMAIL"),
+  "client_id": os.getenv("GOOGLE_CLIENT_ID"),
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/data-standards-team-bot%40data-standards-389209.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
 
 gc = gspread.service_account()
 

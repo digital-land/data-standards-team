@@ -27,3 +27,7 @@ status:
 commit-roadmap::
 	git add what-we-are-working-on
 	git diff --quiet && git diff --staged --quiet || (git commit -m "Rebuilt roadmap $(shell date +%F)"; git push origin $(BRANCH))
+
+commit-data::
+	git add _data
+	git diff --quiet && git diff --staged --quiet || (git commit -m "Fetched latest backlog data $(shell date +%F)"; git push origin $(BRANCH))

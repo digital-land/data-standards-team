@@ -25,3 +25,14 @@ Run the site with
 ```
 bundle exec jekyll serve
 ```
+
+### Running python build locally
+
+To fetch the latest data from the tracker spreadsheet you'll need to create a `.env` file and include the credentials. For example:
+
+```
+GOOGLE_PRIVATE_KEY_ID=...
+GOOGLE_PRIVATE_KEY=...
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_EMAIL=...
+```
