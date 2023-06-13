@@ -1,4 +1,4 @@
-Concern,Status,Open planning software,Development plans (inc. Local Plans),Development consent orders (NSIP),Infrastructure Levy,Biodiversity Net Gain,Environmental planning assessment,Historic Environment Record,Environmental outcome report,"Bringing together housing, land and planning geospatial datasets",Description,Policy team,Legislation,Boundary,Point,Metric,Document,Category,Needs a standard,Who is responsible / officially designates,Authoritative source,Where we're getting data from,Expected number of sources,Expected number of records,Frequency of data updates,Related or linked to...,National dataset documentation page,URL of national dataset,Who asked for it,issue-number
+,Status,Open planning software,Development plans (inc. Local Plans),Development consent orders (NSIP),Infrastructure Levy,Biodiversity Net Gain,Environmental planning assessment,Historic Environment Record,Environmental outcome report,"Bringing together housing, land and planning geospatial datasets",Description,Policy team,Legislation,Boundary,Point,Metric,Document,Category,Needs a standard,Who is responsible / officially designates,Authoritative source,Where we're getting data from,Expected number of sources,Expected number of records,Frequency of data updates,Related or linked to...,National dataset documentation page,URL of national dataset,Who asked for it,issue-number
 Abandoned mines,Backlog,,,,,,,,,,,,,,,,,,,,Coal Authority,,,,,,,,,
 Advertisments,Backlog,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Agricultural land classification,Backlog,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://data.gov.uk/dataset/952421ec-da63-4569-817d-4d6399df40a1/provisional-agricultural-land-classification-alc,,,
@@ -11,7 +11,7 @@ Area habitats,Backlog,,,,,✓,,,,,,,,✓,,,,,,,,,,,,,,,The biodiversity metric 4
 Areas benefitting from flood defences,Backlog,,,✓,,,✓,,,✓,,,,✓,,,,,,,Environment Agency,,,,,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-areas-benefiting-from-defences,,Development consent orders (NSIP);Environmental planning assessment,
 Areas for environmental enhancement,Backlog,,✓,,,,,,,,,,,✓,,,,,Yes,,Local planning authorities,,Multiple,Small,,,,,Local plans,
 Areas of outstanding natural beauty,On the platform,✓,✓,,,,,,✓,,An area of outstanding natural beauty is land protected by law to conserve and enhance its natural beauty,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Local plans,
-Article 4 Directions,Piloting,✓,✓,,,,,,,,An Article 4 direction is made by the local planning authority to remove all or some of the permitted development rights on a site in order to protect it,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Ad-hoc,,,,Open planning software,
+Article 4 Directions,Piloting,✓,✓,,,,,,,,An Article 4 direction is made by the local planning authority to remove all or some of the permitted development rights on a site in order to protect it,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Ad-hoc,,,,Open planning software,9
 Assets of community value,Backlog,,✓,,,,,,,,,,,✓,,,✓,✓,Yes,,Local planning authority,,,,,,,,,
 Authorised landfill sites,Backlog,,,,,,,,✓,,,,,✓,,,,,,,Environment Agency,,,,,,,,Environmental planning assessment,
 Battlefields,On the platform,,✓,✓,,,✓,,,,An area registered with Historic England as a battlefield of significant historical significance,,,✓,,,,,,,Historic England,Historic England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
@@ -57,7 +57,7 @@ COMAH – major hazard sites,Backlog,,✓,,,,,,,,"To ensure development does no
 Common land and village green,Backlog,,,,,,,,,,,,,✓,,,,,,,DEFRA,,,,,,,,,
 Completion notices,Backlog,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Compulsory purchase orders,Backlog,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
-Conservation areas,Piloting,✓,✓,✓,,,✓,,,,An area of special architectural or historic interest with a character or appearance that must be preserved or enhanced ,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities;Historic England; Digital Land,Multiple,Large,,,,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,
+Conservation areas,Piloting,✓,✓,✓,,,✓,,,,An area of special architectural or historic interest with a character or appearance that must be preserved or enhanced ,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities;Historic England; Digital Land,Multiple,Large,,,,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,8
 Contaminated land,Backlog,,,,,,,,,,,,,✓,,,,,,,,,,,,,,,,
 Contravention of building notices,Backlog,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Control of major accident and hazard sites,Backlog,,,,,,,,,,,,,✓,,,✓,,,,,,,,,,,,,
@@ -80,8 +80,8 @@ Employment allocations,Backlog,,✓,,,,,,,,,,,✓,,✓,✓,,,,,,,,,,,,,
 Energy and renewable statistics,Backlog,,,,,,,,✓,,,,,,,,,,,,BEIS,,,,,,,,Environmental planning assessment,
 Energy performance certificates,Backlog,,,✓,,,,,,✓,,,,,,,,,,,,,,,,,,,Development consent orders (NSIP),
 Enterprise zone,Backlog,,✓,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
-Environmental outcome reports,Prioritised backlog,,,,,,,,✓,,,,,,,,,,,,,,,,,,,,,
 Environmental & pollution notice,Backlog,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
+Environmental outcome reports,Prioritised backlog,,,,,,,,✓,,,,,,,,,,,,,,,,,,,,,
 Environmental pollution incidents,Backlog,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
 Environmental stewardship scheme agreements,Backlog,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
 Environmentally sensitive areas,Backlog,,,✓,,,,,,✓,,,,,,,,,,,Natural England,,,,,,https://data.gov.uk/dataset/a5b0ccc4-a144-4027-91fa-49084ff07da2/environmentally-sensitive-areas-england,,Development consent orders (NSIP),
@@ -89,6 +89,7 @@ Essex Wildlife Trust reserves,Backlog,,,,,,,,,,,,,,,,,,,,Biological Record Centr
 Existing railway network,Backlog,,,,,,,,,,,,,,,,,,,,Department for Transport,,,,,,,,,
 Ferry Exchanges,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flood risk area,Backlog,,,,,,,,✓,,,,,✓,,,,,,,,,,,,,,,Environmental planning assessment,
+Flood risk zone 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flood risk zones 2,Next,✓,✓,✓,,,✓,,,✓,,,,✓,,,,,,,,,,,Weekly,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-zone-2,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,5
 Flood risk zones 3,Next,✓,✓,✓,,,✓,,,✓,,,,✓,,,,,,,,,,,Weekly,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-zone-3,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,6
 Flood storage areas,Backlog,,,✓,,,,,,✓,,,,,,,,,,,,,,,,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-storage-areas,,Development consent orders (NSIP),
@@ -313,4 +314,3 @@ Wellmaster hydrogeological database index,Backlog,,,,,,,,,,,,,,,,,,,,British Geo
 Wildbelt designations,Backlog,,,,,,,,,,,,,✓,,,,,,,,,,,,,,,,
 Wildlife,Backlog,,,,,,,,,,,,,✓,,,,,,,,,,,,,,,,
 World heritage sites,On the platform,✓,✓,✓,,,✓,,,✓,"A natural or man-made site, area, or structure that is protected because of its international importance ",,,✓,,,,,,UNESCO,Historic England,Historic England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
-Flood risk zone 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
