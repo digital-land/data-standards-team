@@ -1,13 +1,13 @@
 name: Build roadmap pages
 
 on:
-  schedule:
-    - cron: '30 5 * * *'
   push:
     branches:
       - main
     paths:
       - '_data/**'
+  schedule:
+    - cron: '30 6 * * *'
   workflow_dispatch:
 
 env:
