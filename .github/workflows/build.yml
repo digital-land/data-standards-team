@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '_data/**'
+      - '_data/planning-concerns-backlog.csv'
   schedule:
     - cron: '30 6 * * *'
   workflow_dispatch:
