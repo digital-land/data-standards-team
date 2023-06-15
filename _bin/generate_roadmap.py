@@ -56,8 +56,11 @@ def get_planning_concerns():
 def generate_roadmap():
     env = setup_jinja()
     concerns = get_planning_concerns()
-    template = env.get_template("roadmap.html")
+    count = sum([len(concerns[bucket]) for bucket in concerns.keys()])
+    current_work_template = env.get_template("what-we-are-working-on.html")
+    backlog_template = env.get_template("backlog.html")
 
-    render("./what-we-are-working-on/index.html", template, concerns=concerns)
+    render("./what-we-are-working-on/index.html", current_work_template, concerns=concerns)
+    render("./what-we-are-working-on/backlog.html", backlog_template, concerns=concerns, count=count)
 
 generate_roadmap()

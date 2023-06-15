@@ -1,0 +1,94 @@
+{% extends 'digital-land-frontend/layouts/base.jinja' %}
+
+{%- block stylesheets %}
+{{ super() }}
+<link href="/data-standards/assets/css/application.css" rel="stylesheet" />
+{% endblock stylesheets -%}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="app-header__container govuk-header__container govuk-width-container">
+    <div class="app-header__logo govuk-header__logo">
+      <a href="{{ baseurl }}/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DLUHC
+          </span>
+        </span>
+        <span class="app-header__service-name">Planning Data Standards</span>
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block beforeContent %}
+<a href="{{ baseurl }}/" class="govuk-back-link">Back to data standards home</a>
+{% endblock beforeContent %}
+
+{% block content %}
+<span class="govuk-caption-xl">Data standards</span>
+<h1 class="govuk-heading-xl">Backlog of planning concerns</h1>
+
+<p class="govuk-body-l">We currently have a total of {{ count }} planning concerns on our backlog.</p>
+
+<div class="govuk-grid-row org-count">
+  <div class="govuk-grid-column-one-third">
+   {% if concerns["Prioritised backlog"]|length == 1 %}
+     {% set label = "item" %}
+   {% else %}
+     {% set label = "items" %}
+   {% endif %}
+    <h2 class="govuk-heading-m org-count__name" id="prioritised-backlog">Prioritised backlog</h2>
+    <p class="govuk-body">Text needed here (label = {{ label }})</p>
+    <div class="org-count__wrapper">
+      <p class="govuk-visually-hidden">
+        <span class="js-accessible-list-count"></span>
+      </p>
+      <span class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 js-list-count" aria-hidden="true">{{ concerns["Prioritised backlog"]|length }}</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <ol class="org-list" data-filter="list">
+    {% for concern in concerns["Prioritised backlog"]|sort(attribute='Concern') %}
+      <li class="org-list__item" data-filter="item">
+        <span class="govuk-!-font-size-19">{{ concern['Concern'] }}</span>
+      </li>
+    {% endfor %}
+    </ol>
+  </div>
+</div>
+
+<div class="govuk-grid-row org-count">
+  <div class="govuk-grid-column-one-third">
+   {% if concerns["Backlog"]|length == 1 %}
+     {% set label = "item" %}
+   {% else %}
+     {% set label = "items" %}
+   {% endif %}
+    <h2 class="govuk-heading-m org-count__name" id="prioritised-backlog">Backlog</h2>
+    <p class="govuk-body">Text needed here (label = {{ label }})</p>
+    <div class="org-count__wrapper">
+      <p class="govuk-visually-hidden">
+        <span class="js-accessible-list-count"></span>
+      </p>
+      <span class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-80 js-list-count" aria-hidden="true">{{ concerns["Backlog"]|length }}</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <ol class="org-list" data-filter="list">
+    {% for concern in concerns["Backlog"]|sort(attribute='Concern') %}
+      <li class="org-list__item" data-filter="item">
+        <span class="govuk-!-font-size-19">{{ concern['Concern'] }}</span>
+      </li>
+    {% endfor %}
+    </ol>
+  </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+  {% include './partials/footer.html' %}
+{% endblock footer %}
