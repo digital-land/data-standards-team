@@ -5,12 +5,12 @@ Agricultural land classification,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://d
 Air quality management areas,Backlog,,,,,,✓,,,,,,,,,✓,,,,,,,DEFRA,,Single,Small,,,,,Environmental planning assessment,
 Air quality management locations,Backlog,,,,,,✓,,,,,,,,,✓,,,,,Yes,,DEFRA;Local planning authorities,,Single,Small,,,,,Environmental planning assessment,
 Allotments or community growing spaces,Backlog,,,,,,✓,,,,,,,,,✓,,,,,,,Ordnance Survey,,,,,,,,Environmental planning assessment,
-Ancient woodlands,On the platform,✓,,✓,,,✓,,,,,✓,Any area that’s been wooded continuously since at least 1600 AD,,,✓,,,,,,,Natural England;Local Environmental Records Centres,Natural England,Multiple,Medium,Monthly,,,,Development consent orders (NSIP);Environmental planning assessment,
+Ancient woodlands,On the platform,✓,,✓,,,✓,,,,,✓,Any area that’s been wooded continuously since at least 1600 AD,,,✓,,,,,,,Natural England;Local Environmental Records Centres,Natural England,Multiple,Medium,Monthly,,,,Development consent orders (NSIP);Environmental planning assessment,17
 Aquifer designation,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological Survey; Envionment Agency,,,,,,,,,
 Area habitats,Backlog,,,,,✓,,,,,,,,,,✓,,,,,,,,,,,,,,,The biodiversity metric 4.0 and small sites metric GIS data standard,
 Areas benefitting from flood defences,Backlog,,,✓,,,✓,,,,,✓,,,,✓,,,,,,,Environment Agency,,,,,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-areas-benefiting-from-defences,,Development consent orders (NSIP);Environmental planning assessment,
 Areas for environmental enhancement,Backlog,,✓,,,,,,,,,,,,,✓,,,,,Yes,,Local planning authorities,,Multiple,Small,,,,,Local plans,
-Areas of outstanding natural beauty,On the platform,✓,✓,,,,,,✓,,,,An area of outstanding natural beauty is land protected by law to conserve and enhance its natural beauty,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Local plans,
+Areas of outstanding natural beauty,On the platform,✓,✓,,,,,,✓,,,,An area of outstanding natural beauty is land protected by law to conserve and enhance its natural beauty,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Local plans,19
 Article 4 Directions,Piloting,✓,✓,,,,,,,,,,An Article 4 direction is made by the local planning authority to remove all or some of the permitted development rights on a site in order to protect it,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Ad-hoc,,,,Open planning software,9
 Assets of community value,Backlog,,✓,,,,,,,,,,,,,✓,,,✓,✓,Yes,,Local planning authority,,,,,,,,,
 Authorised landfill sites,Backlog,,,,,,,,✓,,,,,,,✓,,,,,,,Environment Agency,,,,,,,,Environmental planning assessment,
@@ -70,7 +70,7 @@ Cross Rail stations,Backlog,,,,,,,,,,,,,,,,,,,,,,Crossrail,,,,,,,,,
 Design codes,In development,,,,,,,,,,,,"Design codes expand on the ten characteristics of good design set out in the National Design Guide, which reflects the government’s priorities and provides a common overarching framework for design",,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,3
 Designated neighbourhood forums,Backlog,,,,,,,,,,,,,,,✓,,,,,,,,,,,,,,,,
 Designated open space,Backlog,,,,,,,,,,,,,,,✓,,,,,,,Greater London Authority,,,,,,,,,
-Developer contributions,On the platform,,,,✓,,,,,,,,,Infrastucture Funding,,,,,✓,✓,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Annually,Planning applications & decisions,,,,
+Developer contributions,On the platform,,,,✓,,,,,,,,,Infrastucture Funding,,,,,✓,✓,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Annually,Planning applications & decisions,,,,16
 Development plans and timetables,In development,,✓,,,,,,,,,,The status of emerging local plans for local planning authorities,Local Plans,,✓,,,✓,✓,Yes,,Local planning authorities;Planning inspectorate,,,,,,,,New local plan policy team,2
 Development risk and coal resource areas,Backlog,,,,,,,,,,,,,,,,,,,,,,Coal Authority,,,,,,,,,
 Doorstep greens,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
@@ -112,7 +112,7 @@ Great Crested Newts eDNA Pond Surveys,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural Engla
 Greater London archaeological priority areas,Backlog,,✓,,,,,,,,,,,,,,,,,,,,Historic England,,,,,,,,,
 Greenbelt,On the platform,,✓,✓,,,✓,,,,,,An area of open land around a city that cannot be built on,,,✓,,,,,,,DLUHC,DLUHC,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
 Groundwater vulnerability,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological Survey; Envionment Agency,,,,,,,,,
-Gypsy & traveller sites,Prioritised backlog,,✓,,,,,,,,,,,,,✓,,,,,Yes,,Local planning authorities,,,,,,,,,
+Gypsy & traveller sites,Prioritised backlog,,✓,,,,,,,,,,,,,✓,,,,,Yes,,Local planning authorities,,,,,,,,,22
 Habitat networks,Backlog,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,Development consent orders (NSIP),
 Hazardous substance notice,Backlog,,,,,,,,,,,,,,,,,,,,,,Health and Safety Executive,,,,,,,,,
 Hazardous waste interrogator,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
@@ -203,7 +203,7 @@ Nature improvement areas,Backlog,,,✓,,,,,,,,✓,,,,✓,,,,,,,Natural England,,
 Nature reserves,Backlog,,,✓,,,,,,,,✓,,,,✓,,,,,,,,,,,,,https://data.gov.uk/dataset/726484b0-d14e-44a3-9621-29e79fc47bfc/national-nature-reserves-england,,Development consent orders (NSIP),
 Nearby railway schemes,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Nearby road schemes,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
-Neighbourhood plans,Prioritised backlog,,✓,,,,,,,,,,,,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,
+Neighbourhood plans,Prioritised backlog,,✓,,,,,,,,,,,,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,21
 NHS trusts,Backlog,,,,,,,,,,,,,,,,,,,,,,NHS,,,,,,,,,
 Noise abatement,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Noise action important areas,Backlog,,,,,,,,✓,,,,,,,✓,,,,,,,DEFRA,,,,,,,,Environmental planning assessment,
@@ -217,7 +217,7 @@ Open green space,Backlog,,,✓,,,,,,,,✓,,,,,,,,,,,,,,,,,https://www.ordnancesu
 Open roads,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://www.ordnancesurvey.co.uk/business-government/products/open-map-roads,,,
 Opencast coal prospecting areas,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological Survey,,,,,,,,,
 Outstanding notices,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
-Parish,On the platform,,,✓,,,,,,,,✓,The smallest type of local government administrative area in England,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Medium,,,,,Development consent orders (NSIP),
+Parish,On the platform,,,✓,,,,,,,,✓,The smallest type of local government administrative area in England,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Medium,,,,,Development consent orders (NSIP),20
 Parliamentary constituencies,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://beta.ordnancesurvey.co.uk/products/boundary-line,,,
 Permitted development rights,On the platform,✓,✓,,,,,,,,,,,Development Management,,,,,,✓,,,DLUHC,Digital Land,Single,Small,Ad-hoc,Article 4 Direction;Site allocations,,,Open planning software,14
 Planning application consultations,Prioritised backlog,✓,,,,,,,,,,,,Development Management,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,
@@ -247,7 +247,7 @@ Public transport timetables,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://data.g
 Radon,Backlog,,,✓,,,,,,,,✓,,,,✓,,,✓,,,,British Geological Survey,,,,,,https://www.bgs.ac.uk/datasets/radon-data-indicative-atlas-of-radon/,https://www.bgs.ac.uk/download/radon-potential-indicative-atlas-data-for-great-britain/#,Development consent orders (NSIP),
 Railway tracks,Backlog,,,,,,,,✓,,,,,,,✓,,,,,,,Ordnance Survey,,,,,,,,Environmental planning assessment,
 Rainfall data,Backlog,,,✓,,,,,,,,✓,,,,✓,,✓,,,,,Environment Agency,,,,,,https://environment.data.gov.uk/flood-monitoring/doc/rainfall,,Development consent orders (NSIP),
-Ramsar,On the platform,✓,✓,✓,,,✓,,,,,✓,An area of wetlands that is of international importance ,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
+Ramsar,On the platform,✓,✓,✓,,,✓,,,,,✓,An area of wetlands that is of international importance ,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,18
 Recorded flood outlines,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
 Regional flood and coastal committees,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
 Religious buildings,Backlog,,,,,,,,✓,,,,,,,✓,,,,,,,Ordnance Survey,,,,,,,,Environmental planning assessment,
