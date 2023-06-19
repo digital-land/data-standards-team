@@ -2,6 +2,8 @@ import os
 import csv
 import jinja2
 
+from operator import itemgetter
+
 def setup_jinja():
     # register templates
     multi_loader = jinja2.ChoiceLoader([
@@ -57,10 +59,11 @@ def generate_roadmap():
     env = setup_jinja()
     concerns = get_planning_concerns()
     count = sum([len(concerns[bucket]) for bucket in concerns.keys()])
+    all_concerns = sorted([concern for bucket in concerns.keys() for concern in concerns[bucket]], key=itemgetter('Concern'))
     current_work_template = env.get_template("what-we-are-working-on.html")
     backlog_template = env.get_template("backlog.html")
 
     render("./what-we-are-working-on/index.html", current_work_template, concerns=concerns)
-    render("./what-we-are-working-on/backlog.html", backlog_template, concerns=concerns, count=count)
+    render("./what-we-are-working-on/backlog.html", backlog_template, concerns=all_concerns, count=count)
 
 generate_roadmap()
