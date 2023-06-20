@@ -1,0 +1,17 @@
+.app-engagement-panel {
+  @include govuk-responsive-margin(9, "top");
+  padding-top: $govuk-gutter-half;
+  border-top: 2px solid govuk-colour("blue");
+}
+
+.app-engagement-panel__heading {
+  padding-top: 10px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.app-engagement-panel__body:last-child {
+  margin-bottom: 0;
+}

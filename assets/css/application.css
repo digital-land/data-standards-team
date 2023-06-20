@@ -1,4 +1,7 @@
 @charset "UTF-8";
+:root {
+  --govuk-frontend-version: "4.6.0"; }
+
 .govuk-link, .markdown-content a:not([class]) {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1387,7 +1390,7 @@
   .govuk-button[disabled="disabled"]:hover,
   .govuk-button[disabled]:hover {
     background-color: #00703c;
-    cursor: default; }
+    cursor: not-allowed; }
   .govuk-button--disabled:active,
   .govuk-button[disabled="disabled"]:active,
   .govuk-button[disabled]:active {
@@ -1856,7 +1859,7 @@
 
 .govuk-checkboxes__input:disabled,
 .govuk-checkboxes__input:disabled + .govuk-checkboxes__label {
-  cursor: default; }
+  cursor: not-allowed; }
 
 .govuk-checkboxes__input:disabled + .govuk-checkboxes__label,
 .govuk-checkboxes__input:disabled ~ .govuk-hint {
@@ -1994,6 +1997,11 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
+  .govuk-textarea:disabled {
+    opacity: .5;
+    color: inherit;
+    background-color: transparent;
+    cursor: not-allowed; }
 
 .govuk-textarea--error {
   border-color: #d4351c; }
@@ -2081,6 +2089,11 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
+  .govuk-input:disabled {
+    opacity: .5;
+    color: inherit;
+    background-color: transparent;
+    cursor: not-allowed; }
 
 .govuk-input::-webkit-outer-spin-button,
 .govuk-input::-webkit-inner-spin-button {
@@ -2094,6 +2107,23 @@
   border-color: #d4351c; }
   .govuk-input--error:focus {
     border-color: #0b0c0c; }
+
+.govuk-input--extra-letter-spacing {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "tnum" 1;
+  font-feature-settings: "tnum" 1;
+  font-weight: 400;
+  letter-spacing: .05em; }
+  @media print {
+    .govuk-input--extra-letter-spacing {
+      font-family: sans-serif; } }
+  @supports (font-variant-numeric: tabular-nums) {
+    .govuk-input--extra-letter-spacing {
+      -webkit-font-feature-settings: normal;
+      font-feature-settings: normal;
+      font-variant-numeric: tabular-nums; } }
 
 .govuk-input--width-30 {
   max-width: 29.5em; }
@@ -2447,6 +2477,9 @@
   .govuk-file-upload:focus-within {
     outline: 3px solid #ffdd00;
     box-shadow: inset 0 0 0 4px #0b0c0c; }
+  .govuk-file-upload:disabled {
+    opacity: .5;
+    cursor: not-allowed; }
 
 .govuk-footer {
   font-family: "GDS Transport", arial, sans-serif;
@@ -2609,8 +2642,6 @@
   list-style: none;
   -webkit-column-gap: 30px;
   column-gap: 30px; }
-  .govuk-footer__list .govuk-footer__link:hover {
-    text-decoration-thickness: auto; }
 
 @media (min-width: 48.0625em) {
   .govuk-footer__list--columns-2 {
@@ -2731,7 +2762,7 @@
   .govuk-header__link:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 0.1em; }
+    text-underline-offset: 0.1578em; }
   .govuk-header__link:focus {
     outline: 3px solid transparent;
     color: #0b0c0c;
@@ -2847,7 +2878,7 @@
   .govuk-header__menu-button:hover {
     -webkit-text-decoration: solid underline 3px;
     text-decoration: solid underline 3px;
-    text-underline-offset: 0.1em; }
+    text-underline-offset: 0.1578em; }
   .govuk-header__menu-button:focus {
     outline: 3px solid transparent;
     color: #0b0c0c;
@@ -3812,7 +3843,7 @@
 
 .govuk-radios__input:disabled,
 .govuk-radios__input:disabled + .govuk-radios__label {
-  cursor: default; }
+  cursor: not-allowed; }
 
 .govuk-radios__input:disabled + .govuk-radios__label,
 .govuk-radios__input:disabled ~ .govuk-hint {
@@ -3959,6 +3990,10 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
+  .govuk-select:disabled {
+    opacity: .5;
+    color: inherit;
+    cursor: not-allowed; }
 
 .govuk-select option:active,
 .govuk-select option:checked,
@@ -7428,3 +7463,19 @@
     .app-sub-navigation__theme {
       font-size: 14pt;
       line-height: 1.15; } }
+
+.app-engagement-panel {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 2px solid #1d70b8; }
+  @media (min-width: 40.0625em) {
+    .app-engagement-panel {
+      margin-top: 60px; } }
+
+.app-engagement-panel__heading {
+  padding-top: 10px; }
+  .app-engagement-panel__heading:first-child {
+    padding-top: 0; }
+
+.app-engagement-panel__body:last-child {
+  margin-bottom: 0; }
