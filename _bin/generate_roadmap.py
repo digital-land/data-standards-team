@@ -16,8 +16,8 @@ def setup_jinja():
     env = jinja2.Environment(loader=multi_loader)
 
     # set variables to make available to all templates
-    env.globals["assetPath"] = "https://digital-land.github.io/"
     env.globals["baseurl"] = "/data-standards"
+    env.globals["assetPath"] = env.globals["baseurl"] + "/assets"
     env.globals["issuesURL"] = "https://github.com/digital-land/data-standards-backlog/issues/"
 
     return env

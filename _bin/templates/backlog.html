@@ -32,30 +32,47 @@
 
 <p class="govuk-body-l">We currently have a total of <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">{{ count }}</span> planning concerns on our backlog.</p>
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-<dl class="govuk-summary-list">
-  {% for concern in concerns -%}
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      {{ concern['Concern'] }}
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {% if concern['Status'] == "Backlog" %}
-      {% set status_class = "grey" %}
-      {% elif concern['Status'] == "On the platform" %}
-      {% set status_class = "green" %}
-      {% else %}
-      {% set status_class = "blue" %}
-      {% endif %}
-      <strong class="govuk-tag govuk-tag--{{ status_class }}">
-        {{ concern['Status'] }}
-      </strong>
-    </dd>
-    <dd class="govuk-summary-list__actions">
-    </dd>
+<form class="filter-organisations-list__form filter-organisations-list__form--active govuk-!-margin-bottom-9" data-filter="form">
+  <label class="dl-list-filter__label govuk-label govuk-!-font-weight-bold" for="filter-organisations-list">I'm looking for</label>
+  <input class="dl-list-filter__input govuk-input" type="text" id="filter-organisations-list" placeholder="For example, Planning conditions">
+</form>
+
+<div class="concerns-list__wrapper">
+
+  <div class="concerns-list__count__wrapper">
+    <p class="govuk-body">Showing <span class="js-accessible-list-filter__count">{{ count }}</span> planning concerns</p>
+    <span class="govuk-body govuk-!-font-weight-bold govuk-visually-hidden js-list-filter__count" aria-hidden="true">{{ count }}</span>
   </div>
-  {%- endfor %}
-</dl>
+
+  <dl class="govuk-summary-list" data-filter="list">
+    {% for concern in concerns -%}
+    <div class="govuk-summary-list__row" data-filter="item">
+      <dt class="govuk-summary-list__key" data-filter="match-content">
+        {{ concern['Concern'] }}
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {% if concern['Status'] == "Backlog" %}
+        {% set status_class = "grey" %}
+        {% elif concern['Status'] == "On the platform" %}
+        {% set status_class = "green" %}
+        {% else %}
+        {% set status_class = "blue" %}
+        {% endif %}
+        <strong class="govuk-tag govuk-tag--{{ status_class }}">
+          {{ concern['Status'] }}
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    {%- endfor %}
+
+  </dl>
+</div>
+
+<p class="dl-list-filter__no-filter-match js-no-filter-list-matches">No planning concern matches your search term.</p>
 
 <div class="app-engagement-panel">
   <h2 class="govuk-heading-m app-engagement-panel__heading">Are we missing something?</h2>
@@ -66,3 +83,26 @@
 {% block footer %}
   {% include './partials/footer.html' %}
 {% endblock footer %}
+
+{% block govScripts %}
+<script src="{{ assetPath | default('/assets') }}/js/govuk/govuk-frontend.js"></script>
+<script>
+  // initiate all GOVUK components
+  window.GOVUKFrontend.initAll();
+</script>
+{% endblock govScripts %}
+
+{% block digitalLandScripts %}
+<script src="{{ assetPath | default('/assets') }}/js/digital-land-frontend.js"></script>
+{% endblock digitalLandScripts %}
+
+{% block pageScripts %}
+<script>
+  // initialise list filter
+  const $form = document.querySelector('[data-filter="form"]');
+  new window.DLFrontend.ListFilter($form).init({
+    list_section_selector: '.concerns-list__wrapper',
+    count_wrapper_selector: '.concerns-list__count__wrapper'
+  })
+</script>
+{% endblock %}
