@@ -8,6 +8,7 @@ node_modules
 package-lock.json
 
 .DS_Store
+*.swp
 
 # Environments
 .env
@@ -17,3 +18,4 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
