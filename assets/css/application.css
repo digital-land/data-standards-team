@@ -7479,3 +7479,8 @@
 
 .app-engagement-panel__body:last-child {
   margin-bottom: 0; }
+
+.markdown-content img {
+  width: 100%;
+  height: auto;
+}
