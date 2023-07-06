@@ -86,13 +86,13 @@ Environmental pollution incidents,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agenc
 Environmental stewardship scheme agreements,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
 Environmentally sensitive areas,Backlog,,,✓,,,,,,,,✓,,,,,,,,,,,Natural England,,,,,,https://data.gov.uk/dataset/a5b0ccc4-a144-4027-91fa-49084ff07da2/environmentally-sensitive-areas-england,,Development consent orders (NSIP),
 Essex Wildlife Trust reserves,Backlog,,,,,,,,,,,,,,,,,,,,,,Biological Record Centres,,,,,,,,,
-Existing railway network,Backlog,,,,,,,,,,,,An area of land where gypsy and traveller communities live and is owned and managed privately or by the council,,,,,,,,,,Department for Transport,,,,,,,,,
+Existing railway network,Backlog,,,,,,,,,,,,,,,,,,,,,,Department for Transport,,,,,,,,,
 Fast food exclusion zone,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Ferry Exchanges,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flood risk area,Backlog,,,,,,,,✓,,,,,,,✓,,,,,,,,,,,,,,,Environmental planning assessment,
 Flood risk zone 1,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flood risk zones 2,Next,✓,✓,✓,,,✓,,,✓,,✓,An area with up to a 0.1% (1 in 1000) chance of flooding from rivers or the sea,,,✓,,,,,,,,,,,Weekly,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-zone-2,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,5
-Flood risk zones 3,Next,✓,✓,✓,,,✓,,,✓,,✓,"An area with a 0.1% (1 in 100) or greater chance of flooding from rivers, or a 0.5% (1 in 200) or greater chance of flooding from the sea ",,,✓,,,,,,,,,,,Weekly,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-zone-3,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,6
+Flood risk zones 3,Next,✓,✓,✓,,,✓,,,✓,,✓,"An area with a 1% (1 in 100) or greater chance of flooding from rivers, or a 0.5% (1 in 200) or greater chance of flooding from the sea ",,,✓,,,,,,,,,,,Weekly,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-zone-3,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,6
 Flood storage areas,Backlog,,,✓,,,,,,,,✓,,,,,,,,,,,,,,,,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-flood-storage-areas,,Development consent orders (NSIP),
 Food hygiene rating,Backlog,,,,,,,,,,,,,,,,,,,,,,Food Standards Agency,,,,,,,,,
 Food safety notice,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
@@ -113,7 +113,7 @@ Great Crested Newts eDNA Pond Surveys,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural Engla
 Greater London archaeological priority areas,Backlog,,✓,,,,,,,,,,,,,,,,,,,,Historic England,,,,,,,,,
 Greenbelt,On the platform,,✓,✓,,,✓,,,,,,An area of open land around a city that cannot be built on,,,✓,,,,,,,DLUHC,DLUHC,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
 Groundwater vulnerability,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological Survey; Envionment Agency,,,,,,,,,
-Gypsy & traveller sites,Prioritised backlog,,✓,,,,,,,,,,,,,✓,,,,,Yes,,Local planning authorities,,,,,,,,,22
+"Gypsy, Roma & traveller sites",Prioritised backlog,,✓,,,,,,,,,,"An area of land where gypsy, Roma and traveller communities live which may be owned and managed privately or by the council",,,✓,,,,,Yes,,Local planning authorities,,,,,,,,,22
 Habitat networks,Backlog,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,Development consent orders (NSIP),
 Hazardous substance notice,Backlog,,,,,,,,,,,,,,,,,,,,,,Health and Safety Executive,,,,,,,,,
 Hazardous waste interrogator,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
@@ -221,8 +221,8 @@ Opencast coal prospecting areas,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological 
 Outstanding notices,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Parish,On the platform,,,✓,,,,,,,,✓,The smallest type of local government administrative area in England,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Medium,,,,,Development consent orders (NSIP),20
 Parliamentary constituencies,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://beta.ordnancesurvey.co.uk/products/boundary-line,,,
-Permitted development rights,On the platform,✓,✓,,,,,,,,,,The period of consultation where views on the proposed development can be communicated,Development Management,,,,,,✓,,,DLUHC,Digital Land,Single,Small,Ad-hoc,Article 4 Direction;Site allocations,,,Open planning software,14
-Planning application consultations,Prioritised backlog,✓,,,,,,,,,,,,Development Management,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,
+Permitted development rights,On the platform,✓,✓,,,,,,,,,,The right to carry out certain building works and changes of use without the need for a full planning application,Development Management,,,,,,✓,,,DLUHC,Digital Land,Single,Small,Ad-hoc,Article 4 Direction;Site allocations,,,Open planning software,14
+Planning application consultations,Prioritised backlog,✓,,,,,,,,,,,The period of consultation where views on the proposed development can be communicated,Development Management,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,
 Planning application variance,Backlog,✓,,,,,,,,,,,,,,✓,,,✓,✓,,,Local planning authorities,,,,,,,,,
 Planning applications & decisions,In development,✓,,✓,,,,,,,,,Records of applications for development and the associated decisions,Development Management,,✓,,,✓,✓,Yes,,Local planning authorities;Planning inspectorate,,,,Daily,,,,Open planning software;Development consent orders (NSIP),1
 Planning conditions & constraints,Discovery,✓,,,,,,,,,,,,Development Management,,✓,,,✓,✓,Yes,,Local planning authorities,,,,,,,,,4
@@ -284,7 +284,7 @@ Soil Parent Material Model,Backlog,,,,,,,,,,,,,,,,,,,,,,British Geological Surve
 Soil type,Backlog,,,,,,,,,,,,,,,,,,,,,,Cranfield University,,,,,,,,,
 Source protection zones,Backlog,,,,,,,,,,,,,,,,,,,,,,Environment Agency,,,,,,,,,
 Sparsely vegated land,Backlog,,,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,
-Special areas of conversation,On the platform,✓,✓,✓,,,✓,,,,,✓,An area containing wildlife or marine life habitats and species that need conservation,,,✓,,,,,,,DEFRA;Natural England,Natural England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
+Special areas of conservation,On the platform,✓,✓,✓,,,✓,,,,,✓,An area containing wildlife or marine life habitats and species that need conservation,,,✓,,,,,,,DEFRA;Natural England,Natural England,Single,Small,,,,,Development consent orders (NSIP);Environmental planning assessment,
 Special protection areas,On the platform,✓,✓,,,,,,✓,,,,An area containing bird habitats and species that need conservation,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,Environmental planning assessment,
 Special roadside verges,Backlog,,,,,,,,,,,,,,,,,,,,,,Biological Record Centres,,,,,,,,,
 Species data,Backlog,,,,,,,,,,,,,,,,,,,,,,NBN Atlas,,,,,,,,,
