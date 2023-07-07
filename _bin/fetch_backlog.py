@@ -1,10 +1,24 @@
 import os
 import gspread
+import shutil
 from oauth2client.service_account import ServiceAccountCredentials
 from dotenv import load_dotenv
 import pandas as pd
 
+from log_backlog_changes import log_changes
+
 load_dotenv()
+
+backlog_file_path = '_data/planning-concerns-backlog.csv'
+backup_file_path = '_data/planning-concerns-backlog.backup.csv'
+
+def backup_backlog():
+    # Check if the original file exists
+    if os.path.exists(backlog_file_path):
+    # Create a backup of the CSV file
+        shutil.copyfile(backlog_file_path, backup_file_path)
+
+backup_backlog()
 
 # Load the credentials from the JSON file
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -43,3 +57,5 @@ df = df.drop(2)
 # index removes the row indices 
 # header removes the column indices
 df.to_csv('_data/planning-concerns-backlog.csv', index=False, header=False)
+
+log_changes()
