@@ -12,6 +12,20 @@ init:: python-init
 serve::
 	bundle exec jekyll serve
 
+black:
+	black .
+
+black-check:
+	black --check .
+
+flake8:
+	flake8 .
+
+isort:
+	isort --profile black .
+
+lint: black-check flake8
+
 build-css:
 	npm run build:css
 

@@ -3,11 +3,11 @@ import csv
 import datetime
 
 # Define the path to the CSV file
-backlog_file_path = '_data/planning-concerns-backlog.csv'
-backup_file_path = '_data/planning-concerns-backlog.backup.csv'
+backlog_file_path = "_data/planning-concerns-backlog.csv"
+backup_file_path = "_data/planning-concerns-backlog.backup.csv"
 
 # Define the path to the log.csv file
-log_file_path = '_data/backlog-changelog.csv'
+log_file_path = "_data/backlog-changelog.csv"
 
 # Get today's date
 today = datetime.date.today()
@@ -16,39 +16,44 @@ today = datetime.date.today()
 def delete_backup():
     try:
         os.remove(backup_file_path)
-        print('Backup deleted successfully!')
+        print("Backup deleted successfully!")
     except OSError as e:
-        print(f'Error deleting the backup file: {e}')
+        print(f"Error deleting the backup file: {e}")
 
-def get_log_rows(): 
+
+def get_log_rows():
     rows = []
-    with open(log_file_path, 'r') as file:
+    with open(log_file_path, "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
     return rows
 
+
 def write_log(fieldnames, rows):
-    with open(log_file_path, 'w', newline='') as file:
+    with open(log_file_path, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
 
+
 def list_concerns(file_path):
     concerns = []
-    with open(file_path, 'r') as file:
+    with open(file_path, "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            value = row['Concern']
+            value = row["Concern"]
             concerns.append(value)
 
     return concerns
+
 
 def get_changes(current, original):
     added = set(current).difference(original)
     removed = set(original).difference(current)
 
     return added, removed
+
 
 def log_changes():
     # Read concerns from latest and backup csv
@@ -61,15 +66,15 @@ def log_changes():
 
     # record any changes to log
     if len(added) or len(removed):
-        fieldnames = ['date', 'count', 'added', 'removed']
+        fieldnames = ["date", "count", "added", "removed"]
         # get rows from log
         rows = get_log_rows()
 
         new_row = {
-            'date': today.strftime('%Y-%m-%d'),
-            'count': current_count,
-            'added': ';'.join(added),
-            'removed': ';'.join(removed)
+            "date": today.strftime("%Y-%m-%d"),
+            "count": current_count,
+            "added": ";".join(added),
+            "removed": ";".join(removed),
         }
 
         rows.append(new_row)
@@ -77,4 +82,3 @@ def log_changes():
 
     # delete backup file
     delete_backup()
-

@@ -1,3 +1,4 @@
+black
 gspread
 pandas
 oauth2client
