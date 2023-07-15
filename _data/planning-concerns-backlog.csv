@@ -1,7 +1,7 @@
 Concern,Status,Open planning software,Development plans (inc. Local Plans),Development consent orders (NSIP),Infrastructure Levy,Biodiversity Net Gain,Environmental planning assessment,Historic Environment Record,Environmental outcome report,Planning Inspectorate,Site allocations,"Bringing together housing, land and planning geospatial datasets",Description,Policy team,Legislation,Boundary,Point,Metric,Document,Category,Needs a standard,Who is responsible / officially designates,Authoritative source,Where we're getting data from,Expected number of sources,Expected number of records,Frequency of data updates,Related or linked to...,National dataset documentation page,URL of national dataset,Who asked for it,issue-number
-Abandoned mines,Backlog,,,,,,,,,,,,,,,,,,,,,,Coal Authority,,,,,,,,,
+Abandoned mines,Backlog,,,,,,,,,,,,Areas where mining has previously taken place but is no longer in use,,,,,,,,,,Coal Authority,,,,,,,,,
 Advertisments,Backlog,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
-Agricultural land classification,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://data.gov.uk/dataset/952421ec-da63-4569-817d-4d6399df40a1/provisional-agricultural-land-classification-alc,,,
+Agricultural land classification,Backlog,,,,,,,,,,,✓,A system that grades the quality of land for agricultural use,,,,,,,,,,,,,,,,https://data.gov.uk/dataset/952421ec-da63-4569-817d-4d6399df40a1/provisional-agricultural-land-classification-alc,,,
 Air quality management areas,Backlog,,,,,,✓,,,,,,,,,✓,,,,,,,DEFRA,,Single,Small,,,,,Environmental planning assessment,
 Air quality management locations,Backlog,,,,,,✓,,,,,,,,,✓,,,,,Yes,,DEFRA;Local planning authorities,,Single,Small,,,,,Environmental planning assessment,
 Allotments or community growing spaces,Backlog,,,,,,✓,,,,,,,,,✓,,,,,,,Ordnance Survey,,,,,,,,Environmental planning assessment,
