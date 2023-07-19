@@ -34,7 +34,7 @@ If you haven't yet install all the dependencies with `make init` run
 make python-init
 ```
 
-Fetch the latest planning concern data you first need to create a `.env` filr and include the following credentials.
+Fetch the latest planning concern data you first need to create a `.env` file and include the following credentials.
 ```
 GOOGLE_PRIVATE_KEY_ID=...
 GOOGLE_PRIVATE_KEY=...
