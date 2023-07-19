@@ -1,7 +1,4 @@
 @charset "UTF-8";
-:root {
-  --govuk-frontend-version: "4.6.0"; }
-
 .govuk-link, .markdown-content a:not([class]) {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1390,7 +1387,7 @@
   .govuk-button[disabled="disabled"]:hover,
   .govuk-button[disabled]:hover {
     background-color: #00703c;
-    cursor: not-allowed; }
+    cursor: default; }
   .govuk-button--disabled:active,
   .govuk-button[disabled="disabled"]:active,
   .govuk-button[disabled]:active {
@@ -1859,7 +1856,7 @@
 
 .govuk-checkboxes__input:disabled,
 .govuk-checkboxes__input:disabled + .govuk-checkboxes__label {
-  cursor: not-allowed; }
+  cursor: default; }
 
 .govuk-checkboxes__input:disabled + .govuk-checkboxes__label,
 .govuk-checkboxes__input:disabled ~ .govuk-hint {
@@ -1997,11 +1994,6 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
-  .govuk-textarea:disabled {
-    opacity: .5;
-    color: inherit;
-    background-color: transparent;
-    cursor: not-allowed; }
 
 .govuk-textarea--error {
   border-color: #d4351c; }
@@ -2089,11 +2081,6 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
-  .govuk-input:disabled {
-    opacity: .5;
-    color: inherit;
-    background-color: transparent;
-    cursor: not-allowed; }
 
 .govuk-input::-webkit-outer-spin-button,
 .govuk-input::-webkit-inner-spin-button {
@@ -2107,23 +2094,6 @@
   border-color: #d4351c; }
   .govuk-input--error:focus {
     border-color: #0b0c0c; }
-
-.govuk-input--extra-letter-spacing {
-  font-family: "GDS Transport", arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-feature-settings: "tnum" 1;
-  font-feature-settings: "tnum" 1;
-  font-weight: 400;
-  letter-spacing: .05em; }
-  @media print {
-    .govuk-input--extra-letter-spacing {
-      font-family: sans-serif; } }
-  @supports (font-variant-numeric: tabular-nums) {
-    .govuk-input--extra-letter-spacing {
-      -webkit-font-feature-settings: normal;
-      font-feature-settings: normal;
-      font-variant-numeric: tabular-nums; } }
 
 .govuk-input--width-30 {
   max-width: 29.5em; }
@@ -2477,9 +2447,6 @@
   .govuk-file-upload:focus-within {
     outline: 3px solid #ffdd00;
     box-shadow: inset 0 0 0 4px #0b0c0c; }
-  .govuk-file-upload:disabled {
-    opacity: .5;
-    cursor: not-allowed; }
 
 .govuk-footer {
   font-family: "GDS Transport", arial, sans-serif;
@@ -2642,6 +2609,8 @@
   list-style: none;
   -webkit-column-gap: 30px;
   column-gap: 30px; }
+  .govuk-footer__list .govuk-footer__link:hover {
+    text-decoration-thickness: auto; }
 
 @media (min-width: 48.0625em) {
   .govuk-footer__list--columns-2 {
@@ -2762,7 +2731,7 @@
   .govuk-header__link:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 0.1578em; }
+    text-underline-offset: 0.1em; }
   .govuk-header__link:focus {
     outline: 3px solid transparent;
     color: #0b0c0c;
@@ -2878,7 +2847,7 @@
   .govuk-header__menu-button:hover {
     -webkit-text-decoration: solid underline 3px;
     text-decoration: solid underline 3px;
-    text-underline-offset: 0.1578em; }
+    text-underline-offset: 0.1em; }
   .govuk-header__menu-button:focus {
     outline: 3px solid transparent;
     color: #0b0c0c;
@@ -3843,7 +3812,7 @@
 
 .govuk-radios__input:disabled,
 .govuk-radios__input:disabled + .govuk-radios__label {
-  cursor: not-allowed; }
+  cursor: default; }
 
 .govuk-radios__input:disabled + .govuk-radios__label,
 .govuk-radios__input:disabled ~ .govuk-hint {
@@ -3990,10 +3959,6 @@
     outline: 3px solid #ffdd00;
     outline-offset: 0;
     box-shadow: inset 0 0 0 2px; }
-  .govuk-select:disabled {
-    opacity: .5;
-    color: inherit;
-    cursor: not-allowed; }
 
 .govuk-select option:active,
 .govuk-select option:checked,
@@ -7263,6 +7228,9 @@
     .markdown-content table th:first-child,
     .markdown-content table td:first-child {
       padding-left: 0; }
+  .markdown-content img {
+    width: 100%;
+    height: auto; }
 
 .app-masthead {
   padding-top: 40px;
@@ -7479,8 +7447,3 @@
 
 .app-engagement-panel__body:last-child {
   margin-bottom: 0; }
-
-.markdown-content img {
-  width: 100%;
-  height: auto;
-}

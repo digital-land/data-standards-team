@@ -7,8 +7,7 @@ layout: default
   <div class="govuk-grid-column-one-third">
 
   {% if page.navigation or site.data.navigation %}
-    <nav class="app-sub-navigation" aria-labelledby="sub-navigation-heading">
-      <h2 class="govuk-visually-hidden" >{{ "Pages in this section" }}</h2>
+    <nav class="app-sub-navigation">
       {% for section in site.data.navigation %}
         {% if section.title %}
           <h3 class="app-sub-navigation__theme">{{ section.title }}</h3>
@@ -16,8 +15,9 @@ layout: default
         {% if section.links %}
           <ul class="app-sub-navigation__section">
             {% for link in section.links %}
-              <li class="app-sub-navigation__section-item app-sub-navigation__section-item--current">
-                <a class="app-sub-navigation__link" href="{{ site.baseurl }}{{ link.url }}"  aria-current="true">{{ link.text }}</a>
+              {% if link.text == page.title or link.text == layout.section %}{% assign currentPage = true %}{% else %}{% assign currentPage = false %}{% endif %}
+              <li class="app-sub-navigation__section-item{% if currentPage == true %} app-sub-navigation__section-item--current{% endif %}">
+                <a class="app-sub-navigation__link" href="{{ site.baseurl }}{{ link.url }}"{% if currentPage %} aria-current="true"{% endif %}>{{ link.text }}</a>
                   {% if link.children %}
                     <ul class="app-sub-navigation__section app-sub-navigation__section--nested">
                       {% for child in link.children %}                        

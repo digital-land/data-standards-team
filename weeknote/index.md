@@ -1,5 +1,5 @@
 ---
-title: Our weeknotes
+title: Weeknotes
 layout: list
 category: weeknote
 ---
