@@ -10,3 +10,13 @@ A data standard is a formal document that defines how data should be structured,
 
 Each standard provides a set of rules and guidelines for producing and organising that data, ensuring that it can be read and understood by other systems without any confusion or errors.
 
+## What a data standard won’t do
+
+A data standard won’t in itself answer questions for you. It provides the raw ingredients to help you get the answers.
+
+A data standard doesn’t guarantee data quality. The quality of data ultimately depends on how well the standard is implemented and followed, as well as the quality of the data collection process itself.  
+
+Standards help shape consistency - but can’t make any judgement in terms of accuracy. For example it can fix spelling errors, but can’t tell whether a site has been entered in the correct location.
+
+Data standards are not fixed or static, they evolve. A data standard needs to be regularly reviewed and updated to ensure that it remains relevant and effective.
+
