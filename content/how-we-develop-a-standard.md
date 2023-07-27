@@ -22,3 +22,4 @@ What we’ll need later on:
 * a list of all organisations that need to publish the data
 * category data 
 
+If you've been able to answer all those questions and we think you need a data standard too, we'll run a [data discovery](framework-for-data-discoveries.md) so we can understand the data need for the planning concern and gather enough information to start working on a data model.
