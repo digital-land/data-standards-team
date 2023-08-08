@@ -57,6 +57,7 @@ COMAH – major hazard sites,Backlog,,✓,,,,,,,,,,Sites storing or handling la
 Common land and village greens,Backlog,,,,,,,,,,,,"Areas of open space that have been used for recreation by the inhabitants of the town, village or parish for generations  ",,,✓,,,,,,,DEFRA,,,,,,,,,
 Completion notices,Backlog,,,,,,,,,,,,Documents that set a date when work on a new building or conversion should be complete,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
 Compulsory purchase orders,Backlog,,,,,,,,,,,,Orders that allow a public authority to acquire land without the consent of the owner,,,,,,,,Yes,,Local planning authorities,,,,,,,,,
+Community infrstructure levy (CIL) zones,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Conservation areas,Piloting,✓,✓,✓,,,✓,,,,,,An area of special architectural or historic interest with a character or appearance that must be preserved or enhanced ,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities;Historic England; Digital Land,Multiple,Large,,,,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,8
 Contaminated land,Backlog,,,,,,,,,,,,"Land where substances are causing or could cause:
 
@@ -75,6 +76,7 @@ Design codes,In development,,,,,,,,,,,,Geographical areas covered by a design co
 Designated neighbourhood forums,Backlog,,,,,,,,,,,,Organisations or groups empowered to lead the neighbourhood planning process in a neighbourhood area where there is no town or parish council,,,✓,,,,,,,,,,,,,,,,
 Designated open space,Backlog,,,,,,,,,,,,Land laid out as a public garden or used for the purposes of public recreation,,,✓,,,,,,,Greater London Authority,,,,,,,,,
 Developer contributions,On the platform,,,,✓,,,,,,,,Financial or physical contributions from developers towards the cost of providing appropriate infrastructure and services to support their development,Infrastucture Funding,,,,,✓,✓,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Annually,Planning applications & decisions,,,,16
+Development consent order boundary,Backlog,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Development plans and timetables,In development,,✓,,,,,,,,,,The status of emerging local plans for local planning authorities,Local Plans,,✓,,,✓,✓,Yes,,Local planning authorities;Planning inspectorate,,,,,,,,New local plan policy team,2
 Development risk and coal resource areas,Backlog,,,,,,,,,,,,Areas which contain recorded features which could cause risk from the legacy of coal mining operations,,,,,,,,,,Coal Authority,,,,,,,,,
 Doorstep greens,Backlog,,,,,,,,,,,,New or renovated areas of public open space close to people’s homes that can be enjoyed permanently by the local community,,,,,,,,,,Natural England,,,,,,,,,
@@ -239,13 +241,13 @@ Planning conditions & constraints,Discovery,✓,,,,,,,,,,,,Development Managemen
 Play spaces,Backlog,,,,,,,,✓,,,,Area set aside for children to play in,,,✓,,,,,,,,,,,,,,,Environmental planning assessment,
 Playing fields,Backlog,,,,,,,,✓,,,,Land in the open air provided for physical education or recreation,,,✓,,,,,,,,,,,,,,,Environmental planning assessment,
 Pollinator corridors,Backlog,,,,,,,,,,,,"A corridor of native plants that connects different areas of habitat, providing nutrition and homes for pollinators",,,,,,,,,,Biological Record Centres,,,,,,,,,
-Post codes,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://beta.ordnancesurvey.co.uk/products/code-point-open,,,
-Price paid data,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,,,,,,https://www.gov.uk/government/collections/uk-house-price-index-reports#about-the-uk-hpi,,,
-Priority habitat inventory,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
-Priority River Habitat - headwater areas,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
-Priority River Habitat - rivers,Backlog,,,,,,,,,,,,,,,,,,,,,,Natural England,,,,,,,,,
-Probable coal mining,Backlog,,,,,,,,,,,,,,,,,,,,,,Coal Authority,,,,,,,,,
-Proposed ramsar sites,Backlog,,✓,,,,,,,,,,,,,✓,,,,,,,,,,,,,,,,
+Postcodes,Backlog,,,,,,,,,,,✓,A series of letters and numbers designated to an address for sorting mail,,,,,,,,,,,,,,,,https://beta.ordnancesurvey.co.uk/products/code-point-open,,,
+Price paid data,Backlog,,,,,,,,,,,✓,Information on all property sales in England and Wales that are sold for value,,,,,,,,,,,,,,,,https://www.gov.uk/government/collections/uk-house-price-index-reports#about-the-uk-hpi,,,
+Priority habitat inventory,Backlog,,,,,,,,,,,,Geographic extent and location of habitats of principal importance,,,,,,,,,,Natural England,,,,,,,,,
+Priority river habitat - headwater areas,Backlog,,,,,,,,,,,,River and stream sources that exhibit a high degree of naturalness,,,,,,,,,,Natural England,,,,,,,,,
+Priority river habitat - rivers,Backlog,,,,,,,,,,,,Rivers and streams that exhibit a high degree of naturalness,,,,,,,,,,Natural England,,,,,,,,,
+Probable coal mining,Backlog,,,,,,,,,,,,Locations and estimated extents of probable shallow coal mines for which no recorded plan exists,,,,,,,,,,Coal Authority,,,,,,,,,
+Proposed ramsar sites,Backlog,,✓,,,,,,,,,,Proposed boundaries of wetlands of international importance,,,✓,,,,,,,,,,,,,,,,
 Protected land,Backlog,,,✓,,,,,,,,,,,,✓,,,,,,,,,,,,,,,Development consent orders (NSIP),
 Protected Sites (Statutory sites),Backlog,,,,,,,,,,,,,,,,,,,,,,Biological Record Centres,,,,,,,,,
 Protected species,Backlog,,,,,,,,,,,,,,,,,,,,,,Biological Record Centres,,,,,,,,,
