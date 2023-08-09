@@ -52,7 +52,10 @@
           {{ concern['Description'] }}
         </dd>
         <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['issue-number'] %}
+          {%- if concern['discussion-number'] %}
+          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
+          Discuss {{ concern['Concern'] }}</a>
+          {%- elif concern['issue-number'] %}
           <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
           Discuss {{ concern['Concern'] }}</a>
           {% endif -%}
@@ -75,7 +78,10 @@
           {{ concern['Description'] }}
         </dd>
         <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['issue-number'] %}
+          {%- if concern['discussion-number'] %}
+          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
+          Discuss {{ concern['Concern'] }}</a>
+          {%- elif concern['issue-number'] %}
           <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
           Discuss {{ concern['Concern'] }}</a>
           {% endif -%}
@@ -98,7 +104,10 @@
           {{ concern['Description'] }}
         </dd>
         <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['issue-number'] %}
+          {%- if concern['discussion-number'] %}
+          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
+          Discuss {{ concern['Concern'] }}</a>
+          {%- elif concern['issue-number'] %}
           <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
           Discuss {{ concern['Concern'] }}</a>
           {% endif -%}

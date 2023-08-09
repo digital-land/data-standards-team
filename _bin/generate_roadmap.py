@@ -30,6 +30,9 @@ def setup_jinja():
     env.globals[
         "issuesURL"
     ] = "https://github.com/digital-land/data-standards-backlog/issues/"
+    env.globals[
+        "discussionsURL"
+    ] = "https://github.com/digital-land/data-standards-backlog/discussions/"
 
     return env
 

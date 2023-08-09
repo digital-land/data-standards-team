@@ -65,7 +65,10 @@
         </strong>
       </dd>
       <dd class="govuk-summary-list__actions">
-        {%- if concern['issue-number'] %}
+        {%- if concern['discussion-number'] %}
+        <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
+          See discussion</a>
+        {%- elif concern['issue-number'] %}
           <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
           See discussion</a>
         {% endif -%}
