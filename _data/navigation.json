@@ -25,6 +25,11 @@
         "url": "/weeknote/",
         "text": "Weeknotes",
         "description": "Weekly updates and working in the open from our team"
+      },
+      {
+        "url": "/about/community-principles",
+        "text": "Community principles",
+        "description": "Principles for the community of people helping to create standards"
       }
     ]
   }

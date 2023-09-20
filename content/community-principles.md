@@ -4,6 +4,8 @@ permalink: /about/:basename
 layout: content-page
 ---
 
+# {{ page.title }}
+
 These principles are for the community of people that create and contribute to the work on the Digital Land project run by the Department for Levelling Up, Housing and Communities (DLUHC).
 
 ## 1. Start with what exists
