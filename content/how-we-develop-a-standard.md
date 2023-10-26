@@ -24,7 +24,7 @@ What we’ll need later on:
 
 If you've been able to answer all those questions and we think you need a data standard too, we'll run a [data discovery](framework-for-data-discoveries.md) so we can understand the data need for the planning concern and gather enough information to start working on a data model.
 
-We will publish a [technical specification](what-are-technical-specifications.md) for the data model we are working on at the earliest possible.
+We will publish a [technical specification](what-are-technical-specifications.md) for the data model we are working on at the earliest possible opportunity.
 
 ## Make a request for a data standard
 
