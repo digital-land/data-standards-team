@@ -24,6 +24,8 @@ What we’ll need later on:
 
 If you've been able to answer all those questions and we think you need a data standard too, we'll run a [data discovery](framework-for-data-discoveries.md) so we can understand the data need for the planning concern and gather enough information to start working on a data model.
 
+We will publish a [technical specification](what-are-technical-specifications.md) for the data model we are working on at the earliest possible.
+
 ## Make a request for a data standard
 
 If you've read all of this and still think you need a data standard, you can [fill in this form](https://forms.office.com/pages/responsepage.aspx?id=EGg0v32c3kOociSi7zmVqJNtFJ5QP8hIuyULfIEMGvdUM0RWVUsxNUdKU0lEWktNNFVaQjdXV0JRTy4u) and we'll add your request to our backlog.
