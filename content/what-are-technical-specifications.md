@@ -29,4 +29,6 @@ They will be referenced in legislation that outlines what data planning authorit
 
 They do not cover how to publish the data. As long as the data that is published matches the defined structure, then conformity has been achieved.
 
+---
+
 <p class="govuk-body govuk-hint">Page last update on {{ page.last_modified }}</p>
