@@ -7,13 +7,22 @@ markdown: True
   <div class="app-masthead">
     <div class="govuk-width-container">
       {% assign headingLevel = page.hero.headinglevel | default: layout.hero.headinglevel | default: "h2" %}
-      <{{ headingLevel }} class="govuk-heading-xl app-masthead__title">
+      <{{ headingLevel }} class="govuk-heading-xl app-masthead__title {% if page.hero.sub_title or layout.hero.sub_title %}govuk-!-margin-bottom-2{% endif %}">
         {% if page.hero.title %}
           {{ page.hero.title }}
         {% elsif layout.hero.title %}
           {{ layout.hero.title }}
         {% endif %}
       </{{ headingLevel }}>
+      {% if page.hero.sub_title or layout.hero.sub_title %}
+        <p class="govuk-body-l govuk-!-margin-bottom-0 app-masthead__sub-title">
+        {% if page.hero.sub_title %}
+          {{ page.hero.sub_title }}
+        {% elsif layout.hero.sub_title %}
+          {{ layout.hero.sub_title }}
+        {% endif %}
+        </p>
+      {% endif %}
     </div>
   </div>
 {% endif %}

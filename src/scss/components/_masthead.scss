@@ -1,5 +1,7 @@
 .app-masthead {
-  padding-top: 40px;
+  $_padding: 6;
+  @include govuk-responsive-padding($_padding, "top");
+  @include govuk-responsive-padding($_padding, "bottom");
   color: #ffffff;
   background-color: #012169;
   margin-top: -10px;
@@ -11,8 +13,10 @@
       display: table;
   }
 
-  &__title {
+  &__title,
+  &__sub-title {
     color: #fff;
+    max-width: 45ch;
   }
 
 }

@@ -4,39 +4,71 @@ layout: default
 markdown: False
 hero:
   title: "Data standards"
+  sub_title: 'How data standards for planning and housing are developed by the Department for Levelling Up, Housing and Communities.'
 ---
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">How data standards for planning and housing are developed by the Department for Levelling Up, Housing and Communities.</p>
+    {% if page.navigation or site.data.navigation %}
+      {% comment %} <h2 class="govuk-heading-m">Information and services</h2> {% endcomment %}
+      {% for section in site.data.navigation %}
+        <div class="app-content-list govuk-!-margin-bottom-8">
+          {% if section.title %}
+            <h2 class="app-content-list__heading govuk-heading-m">{{ section.title }}</h2>
+          {% endif %}
+          {% if section.links %}
+            <ul class="app-content-list__list" data-track-count="cardList">
+              {% for link in section.links %}
+                <li class="app-content-list__list-item">
+                  <div class="app-content-list__list-item-wrapper">
+                    <h3 class="app-content-list__sub-heading">
+                      <a
+                        class="app-content-list__link"
+                        data-track-count="cardLink"
+                        href="{{ site.baseurl }}{{ link.url }}">
+                        <div class="app-content-list__link-text">{{ link.text }}</div>
+                        {% if link.description %}
+                          <div class="app-content-list__description app-content-list__link-description">
+                            {{ link.description }}
+                          </div>
+                        {% endif %}
+                      </a>
+                    </h3>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
+  <div class="govuk-grid-column-one-third"></div>
 </div>
 
-<hr class="govuk-section-break govuk-section-break--m">
-
-{% if page.navigation or site.data.navigation %}
-  {% for section in site.data.navigation %}
-    <div class="app-cards govuk-!-margin-bottom-8">
-      {% if section.title %}
-        <h2 class="app-cards__heading govuk-heading-m">{{ section.title }}</h2>
-      {% endif %}
-      {% if section.links %}
-        <ul class="app-cards__list" data-track-count="cardList">
-          {% for link in section.links %}
-            <li class="app-cards__list-item">
-              <div class="app-cards__list-item-wrapper">
-                <h3 class="app-cards__sub-heading govuk-heading-s">
-                  <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
-                </h3>
-                {% if link.description %}                  
-                  <p class="govuk-body app-cards__description">
-                    {{ link.description }}
-                  </p>
-                {% endif %}
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
-  {% endfor %}
-{% endif %}
+{% comment %} {% if page.navigation or site.data.navigation %}
+                              {% for section in site.data.navigation %}
+                                <div class="app-cards govuk-!-margin-bottom-8">
+                                  {% if section.title %}
+                                    <h2 class="app-cards__heading govuk-heading-m">{{ section.title }}</h2>
+                                  {% endif %}
+                                  {% if section.links %}
+                                    <ul class="app-cards__list" data-track-count="cardList">
+                                      {% for link in section.links %}
+                                        <li class="app-cards__list-item">
+                                          <div class="app-cards__list-item-wrapper">
+                                            <h3 class="app-cards__sub-heading govuk-heading-s">
+                                              <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+                                            </h3>
+                                            {% if link.description %}                  
+                                              <p class="govuk-body app-cards__description">
+                                                {{ link.description }}
+                                              </p>
+                                            {% endif %}
+                                          </div>
+                                        </li>
+                                      {% endfor %}
+                                    </ul>
+                                  {% endif %}
+                                </div>
+                              {% endfor %}
+{% endif %} {% endcomment %}

@@ -12,6 +12,9 @@ init:: python-init
 serve::
 	bundle exec jekyll serve
 
+build::
+	bundle exec jekyll build --watch
+
 black:
 	black .
 
