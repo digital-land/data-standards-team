@@ -7471,6 +7471,8 @@
     @media (min-width: 40.0625em) {
       .app-content-list__list-item {
         padding-bottom: 20px; } }
+    .app-content-list__list-item:first-child {
+      padding-top: 0; }
 
 .app-content-list__link {
   text-decoration: none;

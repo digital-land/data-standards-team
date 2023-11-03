@@ -9,6 +9,9 @@
       @include govuk-responsive-padding(4, "bottom");
       // @include govuk-responsive-margin(3, "bottom");
       border-bottom: 1px solid $govuk-border-colour;
+      &:first-child {
+        padding-top: 0;
+      }
     }
   }
   &__link {

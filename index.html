@@ -7,9 +7,9 @@ hero:
   sub_title: 'How data standards for planning and housing are developed by the Department for Levelling Up, Housing and Communities.'
 ---
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop">
     {% if page.navigation or site.data.navigation %}
-      {% comment %} <h2 class="govuk-heading-m">Information and services</h2> {% endcomment %}
+      <h2 class="govuk-heading-m">About our work</h2>
       {% for section in site.data.navigation %}
         <div class="app-content-list govuk-!-margin-bottom-8">
           {% if section.title %}
@@ -42,33 +42,27 @@ hero:
       {% endfor %}
     {% endif %}
   </div>
-  <div class="govuk-grid-column-one-third"></div>
+  <div class="govuk-grid-column-full govuk-grid-column-one-third-from-desktop">
+    <h2 class="govuk-heading-m">Services and tools</h2>
+    <ul class="govuk-list govuk-list--spaced">
+      <li class="govuk-list__item">
+        <p class="govuk-body govuk-!-margin-bottom-1">
+          <a href="https://dluhc-datasets.planning-data.dev/" class="govuk-link govuk-!-font-weight-bold">Standards manual</a>
+        </p>
+        <p class="govuk-body">A guide to help teams create standards for planning and housing data.</p>
+      </li>
+      <li class="govuk-list__item">
+        <p class="govuk-body govuk-!-margin-bottom-1">
+          <a href="https://dluhc-datasets.planning-data.dev/" class="govuk-link govuk-!-font-weight-bold">DLUHC Datasets</a>
+        </p>
+        <p class="govuk-body">Datasets managed by the Digital Land team within the Department for Levelling Up, Housing and Communities.</p>
+      </li>
+      <li class="govuk-list__item">
+        <p class="govuk-body govuk-!-margin-bottom-1">
+          <a href="https://development-plan-prototype.herokuapp.com/" class="govuk-link govuk-!-font-weight-bold">Development plan data collector</a>
+        </p>
+        <p class="govuk-body">Prototype tool for creating data that meets the development plan data standard.</p>
+      </li>
+    </ul>
+  </div>
 </div>
-
-{% comment %} {% if page.navigation or site.data.navigation %}
-                              {% for section in site.data.navigation %}
-                                <div class="app-cards govuk-!-margin-bottom-8">
-                                  {% if section.title %}
-                                    <h2 class="app-cards__heading govuk-heading-m">{{ section.title }}</h2>
-                                  {% endif %}
-                                  {% if section.links %}
-                                    <ul class="app-cards__list" data-track-count="cardList">
-                                      {% for link in section.links %}
-                                        <li class="app-cards__list-item">
-                                          <div class="app-cards__list-item-wrapper">
-                                            <h3 class="app-cards__sub-heading govuk-heading-s">
-                                              <a class="govuk-link app-cards__link" data-track-count="cardLink" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
-                                            </h3>
-                                            {% if link.description %}                  
-                                              <p class="govuk-body app-cards__description">
-                                                {{ link.description }}
-                                              </p>
-                                            {% endif %}
-                                          </div>
-                                        </li>
-                                      {% endfor %}
-                                    </ul>
-                                  {% endif %}
-                                </div>
-                              {% endfor %}
-{% endif %} {% endcomment %}
