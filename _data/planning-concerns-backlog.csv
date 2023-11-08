@@ -162,7 +162,7 @@ Lakes,Backlog,,,,,,✓,,,,,,,Large areas of fresh water surrounded by land,,,,,,
 Land maintenance notice,Backlog,,,,,,,,,,,,,"A notice served when the condition of land is having an
 adverse effect on a neighbourhood",,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Land ownership boundary,Backlog,,,✓,,,,,,,,,,The rough boundary of a property,,,,,,,,,,Land Registry,,,,,,,,,,,Local plans,,
-Land registry polygons / red line boundaries,Backlog,✓,,,,,,,,,,,,The indicative shapes and positions of each boundary of registered titles for land and property,,,✓,,,,,,,,,,,,,,,,,,Open planning software,,
+Land registry polygons / red line boundaries,Discovery,✓,,,,,,,,,,,,The indicative shapes and positions of each boundary of registered titles for land and property,,,✓,,,,,,,,,,,,,,,,,,Open planning software,,
 Land required for public purpose,Backlog,,,,,,,,,,,,,Land reserved for a public purpose under a planning scheme,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Land to be acquired for roadworks,Backlog,,,,,,,,,,,,,Land reserved for roadworks,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Landmark buildings,Backlog,,,,,,,,,,,,,Buildings of great historical or artistic value that have protection to prevent them from being changed or destroyed,,,✓,,,,,,,,,,,,,,,,,,,,
@@ -176,14 +176,15 @@ Listed buildings,Piloting,✓,,✓,✓,,,✓,,,,,,A building which is protected 
 Local air quality action plan,Backlog,,,,,,,,,,,,,Plan that outlines local action to improve air quality,,,,,,✓,,Yes,,Local planning authorites,,Multiple,Small,,,,,,,,,,
 Local authority district,On the platform,✓,,,✓,,,✓,,,,,✓,The geographic area that a local government body is responsible for,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Small,,,,,,,,Development consent orders (NSIP);Environmental planning assessment,,
 Local development order,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Local flood data,Next,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Local green space,Backlog,,,,✓,,,,,,,,,"Protected green areas demonstrably special to the local community, whether in a village or in a neighbourhood in a town or city",,,✓,,,,,,,,,,,,,,,,,,Development consent orders (NSIP),,
 Local nature recovery strategy,Backlog,,,,,,,,,,,,,Locations to create or improve habitat most likely to provide the greatest benefit for nature and the wider environment,,,✓,,,✓,,,,,,,,,,,,,,,,,
 Local nature reserve,Backlog,,,,,,,,,✓,,,,A protected area of land designated by a local authority because of its special natural interest or educational value,,,✓,,,,,,,Local Environment Record Centres,,,,,,,,,,,Environmental planning assessment,,
 Local planning authority,On the platform,✓,,,✓,,,✓,,,✓,,,The planning department of the district or borough council,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Small,,,,,,,,Development consent orders (NSIP);Environmental planning assessment,13,36
 Local plan policies,Backlog,✓,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Local wildlife sites,Backlog,,,,,,,,,✓,,,,Areas of land that are especially important for their local wildlife,,,✓,,,,,,,Biological Record Centres,,,,,,,,,,,Environmental planning assessment,,
+Local wildlife sites,Next,,,,,,,,,✓,,,,Areas of land that are especially important for their local wildlife,,,✓,,,,,,,Biological Record Centres,,,,,,,,,,,Environmental planning assessment,,
 Locally listed areas,Backlog,,,✓,,,,,,,,,,To protect locally important historic places and spaces,,,✓,,,,,Yes,,Local planning authorities,,,,,,,,,,,Local plans,,
-Locally listed buildings,Backlog,,,,,,,,,,,,,"A building recognised by the local authority (but not nationally) as having local importance due to its architectural, historical or environmental significance",,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,,,,,
+Locally listed buildings,Next,,,,,,,,,,,,,"A building recognised by the local authority (but not nationally) as having local importance due to its architectural, historical or environmental significance",,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Locally significant industrial sites (LSIS),Backlog,,,,,,,,,,,,,Sites that have particular local importance for industrial and related functions,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 London squares,Backlog,,,,,,,,,,,,,"Protected squares in London that should only be used as ornamental gardens, pleasure grounds or for play, rest or recreation",,,✓,,,,,,,,,,,,,,,,,,,,
 Long established & protected woodland,Backlog,,,✓,,,,,,,,,,Areas that have been wooded continuously from 1893,,,✓,,,,,,,,,,,,,,,,,,,,
@@ -290,8 +291,8 @@ Self and custom build area,Backlog,,,,,,,,,,,,,Plots for custom and self-build h
 Sensitive areas - nitrates,Backlog,,,,,,,,,,,,,Areas designated as being at risk from agricultural nitrate pollution,,,,,,,,,,Natural England,,,,,,,,,,,,,
 Shallow coal mine workings,Backlog,,,,,,,,,,,,,Shallow coal mine workings are derived from the Coal Authority’s records of underground coal mine workings,,,,,,,,,,Coal Authority,,,,,,,,,,,,,
 Shellfish waters,Backlog,,,,,,,,,,,,,Areas designated for the protection of shellfish growth and production,,,,,,,,,,"Centre for Environment, Fisheries and Aquaculture Science",,,,,,,,,,,,,
-Site allocations,Next,,,✓,,,,,,,,,,"Areas identified as sites for housing, employment, retail or green space to be developed in the future",,,✓,,✓,✓,,Yes,,Local planning authorities,,,,,,,,,,,,7,42
-Sites of importance for nature conservation,Backlog,✓,,,,,,,,✓,,,,Defined areas identified and selected for their nature conservation value,,,✓,,,,,,,,,,,,,,,,,,Environmental planning assessment,,
+Site allocations,Backlog,,,✓,,,,,,,,,,"Areas identified as sites for housing, employment, retail or green space to be developed in the future",,,✓,,✓,✓,,Yes,,Local planning authorities,,,,,,,,,,,,7,42
+Sites of importance for nature conservation,Next,✓,,,,,,,,✓,,,,Defined areas identified and selected for their nature conservation value,,,✓,,,,,,,,,,,,,,,,,,Environmental planning assessment,,
 Sites of special scientific interest,On the platform,✓,,✓,✓,,,✓,,,,,✓,A protected area that’s of particular interest to science due to rare species of fauna or flora or important geological or physiological features,,,✓,,,,,,,Natural England,Natural England,Single,Small,,,,,,,,Development consent orders (NSIP);Environmental planning assessment,,
 Smoke control area,Backlog,,,,,,,,,,,,,"Areas where:
 - you cannot release smoke from a chimney
