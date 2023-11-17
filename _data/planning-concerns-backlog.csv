@@ -6,7 +6,7 @@ Air quality management areas,Backlog,,,,,,,,,,,,✓,,,,,,Areas where air polluti
 Air quality management locations,Backlog,,,,,,,,,,,,✓,,,,,,Locations of air quality monitoring sites,,,✓,,,,,Yes,,DEFRA;Local planning authorities,,Single,Small,,,,,,,,Environmental planning assessment,,
 Allotments or community growing spaces,Backlog,,,,,,,,,,,,✓,,,,,,"Land used by communities for growing vegetables, fruit, herbs or flowers which is not for profit",,,✓,,,,,,,Ordnance Survey,,,,,,,,,,,Environmental planning assessment,,
 Ancient woodlands,On the platform,,,,,,✓,,,✓,,,✓,,,,,✓,Areas that have been wooded continuously since at least 1600 AD,,,✓,,,,,,,Natural England;Local Environmental Records Centres,Natural England,Multiple,Medium,Monthly,,,,,,,Development consent orders (NSIP);Environmental planning assessment,17,32
-Aquifer designation,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,British Geological Survey; Envionment Agency,,,,,,,,,,,,,
+Ancient woodlands,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,British Geological Survey; Envionment Agency,,,,,,,,,,,,,
 Area habitats,Backlog,,,,,,,,,,,✓,,,,,,,,,,✓,,,,,,,,,,,,,,,,,,The biodiversity metric 4.0 and small sites metric GIS data standard,,
 Areas benefitting from flood defences,Backlog,,,,,,,,,✓,,,✓,,,,,✓,Areas currently protected by flood defences,,,✓,,,,,,,Environment Agency,,,,,,,https://ckan.publishing.service.gov.uk/dataset/flood-map-for-planning-rivers-and-sea-areas-benefiting-from-defences,,,,Development consent orders (NSIP);Environmental planning assessment,,
 Areas for environmental enhancement,Backlog,,,,,,,,✓,,,,,,,,,,Areas where new habitats for wildlife will be created or restored,,,✓,,,,,Yes,,Local planning authorities,,Multiple,Small,,,,,,,,Local plans,,
@@ -76,7 +76,7 @@ Design codes,Next,,,,,,,,,,,,,,,,,,Geographical areas covered by a design code,,
 Designated neighbourhood forums,Backlog,,,,,,,,,,,,,,,,,,Organisations or groups empowered to lead the neighbourhood planning process in a neighbourhood area where there is no town or parish council,,,✓,,,,,,,,,,,,,,,,,,,,
 Designated open space,Backlog,,,,,,,,,,,,,,,,,,Land laid out as a public garden or used for the purposes of public recreation,,,✓,,,,,,,Greater London Authority,,,,,,,,,,,,,
 Developer contributions,On the platform,,,,,,,,,,✓,,,,,,,,Financial or physical contributions from developers towards the cost of providing appropriate infrastructure and services to support their development,Infrastucture Funding,,,,,✓,✓,Yes,,Local planning authorities,Local planning authorities,Multiple,Large,Annually,Planning applications & decisions,,,,,,,16,34
-Development consent order boundary,In development,,,,,,,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Development consent order boundary,Archived,,,,,,,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Development plans and timetables,In development,,,,,,,,✓,,,,,,,,,,The status of emerging local plans for local planning authorities,Local Plans,,✓,,,✓,✓,Yes,,Local planning authorities;Planning inspectorate,,,,,,,,,,,New local plan policy team,2,26
 Development risk and coal resource areas,Backlog,,,,,,,,,,,,,,,,,,Areas which contain recorded features which could cause risk from the legacy of coal mining operations,,,,,,,,,,Coal Authority,,,,,,,,,,,,,
 Doorstep greens,Backlog,,,,,,,,,,,,,,,,,,New or renovated areas of public open space close to people’s homes that can be enjoyed permanently by the local community,,,,,,,,,,Natural England,,,,,,,,,,,,,
@@ -178,7 +178,7 @@ Local development order,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Local flood data,Next,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Local green space,Backlog,,,,,,,,,✓,,,,,,,,,"Protected green areas demonstrably special to the local community, whether in a village or in a neighbourhood in a town or city",,,✓,,,,,,,,,,,,,,,,,,Development consent orders (NSIP),,
 Local nature recovery strategy,Backlog,,,,,,,,,,,,,,,,,,Locations to create or improve habitat most likely to provide the greatest benefit for nature and the wider environment,,,✓,,,✓,,,,,,,,,,,,,,,,,
-Local nature reserve,Backlog,,,,,,,,,,,,,,✓,,,,A protected area of land designated by a local authority because of its special natural interest or educational value,,,✓,,,,,,,Local Environment Record Centres,,,,,,,,,,,Environmental planning assessment,,
+Local nature reserve,Discovery,,,,,,,,,,,,,,✓,,,,A protected area of land designated by a local authority because of its special natural interest or educational value,,,✓,,,,,,,Local Environment Record Centres,,,,,,,,,,,Environmental planning assessment,,
 Local planning authority,On the platform,,,,,,✓,,,✓,,,✓,,,✓,,,The planning department of the district or borough council,,,✓,,,,,,,Office for National Statistics,Office for National Statistics,Single,Small,,,,,,,,Development consent orders (NSIP);Environmental planning assessment,13,36
 Local plan policies,Backlog,,,,,,✓,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Local wildlife sites,Next,,,,,,,,,,,,,,✓,,,,Areas of land that are especially important for their local wildlife,,,✓,,,,,,,Biological Record Centres,,,,,,,,,,,Environmental planning assessment,,
@@ -216,7 +216,7 @@ National public transport access nodes,Backlog,,,,,,,,,,,,,,,,,,All public trans
 National Trust land –  limited access,Backlog,,,,,,,,,,,,,,,,,,Land that is enclosed as part of a National Trust estate and public access is limited,,,,,,,,,,National Trust,,,,,,,,,,,,,
 National Trust land – always open,Backlog,,,,,,,,,,,,,,,,,,National Trust land that the public has access to on foot only,,,,,,,,,,National Trust,,,,,,,,,,,,,
 Nature improvement areas,Backlog,,,,,,,,,✓,,,,,,,,✓,Areas of the country where partnerships have been set up to enhance the natural environment,,,✓,,,,,,,Natural England,,,,,,,https://data.gov.uk/dataset/a19c95e3-9657-457d-825e-3d2f3993b653/nature-improvement-areas,,,,Development consent orders (NSIP),,
-Nature reserves,Backlog,,,,,,,,,✓,,,,,,,,✓,"Areas where wildlife, plants and animals are protected to allow them to thrive",,,✓,,,,,,,,,,,,,,https://data.gov.uk/dataset/726484b0-d14e-44a3-9621-29e79fc47bfc/national-nature-reserves-england,,,,Development consent orders (NSIP),,
+National nature reserves,Discovery,,,,,,,,,✓,,,,,,,,✓,"Areas where wildlife, plants and animals are protected to allow them to thrive",,,✓,,,,,,,,,,,,,,https://data.gov.uk/dataset/726484b0-d14e-44a3-9621-29e79fc47bfc/national-nature-reserves-england,,,,Development consent orders (NSIP),,
 Nearby railway schemes,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Nearby road schemes,Backlog,,,,,,,,,,,,,,,,,,,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,
 Neighbourhood plans,Prioritised backlog,,,,,,,,✓,,,,,,,,,,,,,✓,,,✓,,Yes,,Local planning authorities,,,,,,,,,,,,21,37
