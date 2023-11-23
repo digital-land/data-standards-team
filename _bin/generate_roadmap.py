@@ -3,6 +3,7 @@ import csv
 import jinja2
 
 from operator import itemgetter
+from jinja_filters import slugify_filter
 
 
 def setup_jinja():
@@ -33,6 +34,7 @@ def setup_jinja():
     env.globals[
         "discussionsURL"
     ] = "https://github.com/digital-land/data-standards-backlog/discussions/"
+    env.filters["slugify"] = slugify_filter
 
     return env
 
@@ -79,6 +81,7 @@ def generate_roadmap():
     )
     current_work_template = env.get_template("what-we-are-working-on.html")
     backlog_template = env.get_template("backlog.html")
+    planning_consideration_template = env.get_template("planning-consideration.html")
 
     render(
         "./what-we-are-working-on/index.html", current_work_template, concerns=concerns
@@ -89,6 +92,12 @@ def generate_roadmap():
         concerns=all_concerns,
         count=count,
     )
+    for concern in all_concerns:
+        render(
+            f"./what-we-are-working-on/planning-consideration/{slugify_filter(concern['Concern'])}/index.html",
+            planning_consideration_template,
+            consideration=concern,
+        )
 
 
 generate_roadmap()
