@@ -84,7 +84,7 @@ def generate_roadmap():
         "./what-we-are-working-on/index.html", current_work_template, concerns=concerns
     )
     render(
-        "./what-we-are-working-on/backlog.html",
+        "./what-we-are-working-on/planning-consideration/index.html",
         backlog_template,
         concerns=all_concerns,
         count=count,
