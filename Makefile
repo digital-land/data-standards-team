@@ -35,7 +35,7 @@ build-css:
 fetch-backlog-data: 
 	python _bin/fetch_backlog.py
 
-roadmap-page: 
+pages: 
 	python _bin/generate_roadmap.py
 
 status:
