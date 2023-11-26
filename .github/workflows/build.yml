@@ -36,8 +36,8 @@ jobs:
     - name: Install build dependencies
       run: make python-init
 
-    - name: Build roadmap pages
-      run: make roadmap-page
+    - name: Build pages
+      run: make pages
 
     - name: Output git status
       run: make status
