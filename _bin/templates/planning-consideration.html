@@ -21,7 +21,7 @@
       'href': baseurl + "/what-we-are-working-on/planning-consideration"
     },
     {
-      'text': consideration['Concern']
+      'text': consideration['concern']
     }
   ]
 }) }}
@@ -29,7 +29,53 @@
 
 {% block content %}
 <span class="govuk-caption-xl">Planning consideration</span>
-<h1 class="govuk-heading-xl">{{ consideration['Concern'] }}</h1>
+<h1 class="govuk-heading-xl">{{ consideration['concern'] }}</h1>
+
+<p class="govuk-body"><span class="govuk-tag govuk-tag--grey">{{ consideration['status'] }}</span></p>
+
+<h4 class="govuk-heading-s">Description</h4>
+<p class="govuk-body">{{ consideration['description'] }}</p>
+
+<h4 class="govuk-heading-s">Legislation</h4>
+<p class="govuk-body">
+  {%- if consideration['legislation'] %}
+  {{ consideration['legislation'] }}
+  {% else -%}
+  <span class="govuk-hint">Legislation not captured.</span>
+  {% endif -%}
+</p>
+
+<h4 class="govuk-heading-s">Who is asking for it?</h4>
+{%- set requesters = consideration['who-asked-for-it'].split(';') %}
+{% if requesters|length > 0 -%}
+  <ul class="govuk-list govuk-list--bullet">
+    {%- for requester in requesters %}
+    <li>{{ requester }}</li>
+    {% endfor -%}
+  </ul>
+{%- endif %}
+<p class="govuk-body">{{ consideration['legislation'] }}</p>
+
+{%- if consideration['needs-a-standard']|lower == "no"  %}
+<h4 class="govuk-heading-s">National dataset</h4>
+<p class="govuk-body">{{ consideration['dataset-name'] }}<br />
+  <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
+</p>
+<p class="govuk-body">Documentation url: <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
+<p class="govuk-body">Licence: <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a></p>
+{% endif -%}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h4 class="govuk-heading-l">Get involved</h4>
+
+<p class="govuk-body">
+{%- if consideration['discussion-number'] %}
+Comments and feedback on this planning consideration may be provided on the <a href="https://github.com/digital-land/data-standards-backlog/discussions/{{consideration['discussion-number']}}" class="govuk-link">GitHub discussion</a>.
+{% else -%}
+<span class="govuk-hint">No github discussion set up.</span>
+{% endif -%}
+</p>
 
 {% endblock content %}
 

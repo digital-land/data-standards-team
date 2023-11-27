@@ -4,6 +4,7 @@ import jinja2
 
 from operator import itemgetter
 from jinja_filters import slugify_filter
+from utils import pythonic_keys
 
 
 def setup_jinja():
@@ -93,8 +94,9 @@ def generate_roadmap():
         count=count,
     )
     for concern in all_concerns:
+        concern = pythonic_keys(concern)
         render(
-            f"./what-we-are-working-on/planning-consideration/{slugify_filter(concern['Concern'])}/index.html",
+            f"./what-we-are-working-on/planning-consideration/{slugify_filter(concern['concern'])}/index.html",
             planning_consideration_template,
             consideration=concern,
         )
