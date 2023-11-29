@@ -69,6 +69,11 @@
 {% endif %}</p>
 {% endif -%}
 
+{% if consideration['schema-urls'] or consideration['specification-urls'] %}
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h3 class="govuk-heading-l">What we've modelled</h3>
+{% endif %}
+
 {% if consideration['schema-urls'] %}
 <h4 class="govuk-heading-s">Schemas</h4>
 <p class="govuk-body">We have created schemas for {{ consideration['concern'] }}.</p>
