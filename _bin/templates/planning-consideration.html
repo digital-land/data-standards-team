@@ -69,6 +69,20 @@
 {% endif %}</p>
 {% endif -%}
 
+{% if consideration['schema-urls'] %}
+<h4 class="govuk-heading-s">Schemas</h4>
+<p class="govuk-body">We have created schemas for {{ consideration['concern'] }}.</p>
+{%- set urls = consideration['schema-urls'].split(';') %}
+{% if urls|length > 0 -%}
+  <ul class="govuk-list govuk-list--bullet">
+    {%- for url in urls %}
+    {%- set schema_name = url.split('/')[-1].replace('.md', "").replace("-", " ")|capitalize %}
+    <li><a href="{{ url }}" class="govuk-link">{{ schema_name }}</a></li>
+    {% endfor -%}
+  </ul>
+{%- endif %}
+{% endif %}
+
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 <h4 class="govuk-heading-l">Get involved</h4>
