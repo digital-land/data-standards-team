@@ -69,9 +69,36 @@
 {% endif %}</p>
 {% endif -%}
 
-{% if consideration['schema-urls'] or consideration['specification-urls'] %}
+{% if consideration['useful-links'] %}
+<h4 class="govuk-heading-s">Useful links</h4>
+{%- set _links = consideration['useful-links'].split(';') %}
+<ul class="govuk-list govuk-list--bullet">
+  {% for _link in _links %}
+  {%- set parts = _link.split('|') %}
+  <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if consideration['partnering-with'] %}
+<h4 class="govuk-heading-s">Who we are working with</h4>
+{%- set _partners = consideration['partnering-with'].split(';') %}
+<ul class="govuk-list govuk-list--bullet">
+  {% for _partner in _partners %}
+  {%- set parts = _partner.split('|') %}
+  <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if consideration['schema-urls'] or consideration['specification-url'] %}
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 <h3 class="govuk-heading-l">What we've modelled</h3>
+{% endif %}
+
+{% if consideration['specification-url'] %}
+<h4 class="govuk-heading-s">Specification</h4>
+<p class="govuk-body">We have drafted <a href="{{ consideration['specification-url'] }}" class="govuk-link">a specification for {{ consideration['concern'] }}</a>.</p>
 {% endif %}
 
 {% if consideration['schema-urls'] %}
