@@ -62,7 +62,11 @@
   <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
 </p>
 <p class="govuk-body">Documentation url: <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
-<p class="govuk-body">Licence: <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a></p>
+<p class="govuk-body">Licence: {% if not consideration['license'] %}
+  <span class="govuk-tag govuk-tag--yellow">Missing</span>
+  {% else %}
+  <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a>
+{% endif %}</p>
 {% endif -%}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
