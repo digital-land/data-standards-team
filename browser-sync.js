@@ -3,5 +3,5 @@ module.exports = {
     "_site/**/*.*"
   ],
   "port": "3000",
-  "server": "_site"
+  "proxy": "127.0.0.1:4000/data-standards/"
 };

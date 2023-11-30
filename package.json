@@ -7,7 +7,7 @@
     "build:css": "npm run nps build.stylesheets",
     "build:js": "npm run nps build.javascripts",
     "build": "npm-run-all --serial build:*",
-    "blah:content": "npx chokidar './**/*.{html,htm,md}' --ignore './_site/**/*.{html,md}' --command 'npm run build:site'",
+    "watch:content": "npx chokidar './**/*.{html,htm,md}' --ignore './_site/**/*.{html,md}' --command 'npm run build:site'",
     "watch:assets": "npm run nps watch.assets",
     "watch": "npm-run-all --parallel watch:*",
     "serve": "npm-run-all --parallel serve:*",
