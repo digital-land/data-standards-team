@@ -1,4 +1,5 @@
 {% extends 'digital-land-frontend/layouts/base.jinja' %}
+{% from "govuk_frontend_jinja/components/summary-list/macro.html" import govukSummaryList -%}
 
 {%- block stylesheets %}
 {{ super() }}
@@ -31,43 +32,102 @@
 <span class="govuk-caption-xl">Planning consideration</span>
 <h1 class="govuk-heading-xl">{{ consideration['concern'] }}</h1>
 
-<p class="govuk-body"><span class="govuk-tag govuk-tag--grey">{{ consideration['status'] }}</span></p>
-
-<h4 class="govuk-heading-s">Descriptionssssssss</h4>
-<p class="govuk-body">{{ consideration['description'] }}</p>
-
-<h4 class="govuk-heading-s">Legislation</h4>
-<p class="govuk-body">
+{% set legislationContent %}
   {%- if consideration['legislation'] %}
   {{ consideration['legislation'] }}
   {% else -%}
   <span class="govuk-hint">Legislation not captured.</span>
   {% endif -%}
-</p>
+{% endset %}
 
-<h4 class="govuk-heading-s">Who is asking for it?</h4>
 {%- set requesters = consideration['who-asked-for-it'].split(';') %}
 {% if requesters|length > 0 -%}
-  <ul class="govuk-list govuk-list--bullet">
+  {% set requestersHTML %}
+  <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
     {%- for requester in requesters %}
     <li>{{ requester }}</li>
     {% endfor -%}
   </ul>
+ {% endset %}
 {%- endif %}
-<p class="govuk-body">{{ consideration['legislation'] }}</p>
 
-{%- if consideration['needs-a-standard']|lower == "no"  %}
-<h4 class="govuk-heading-s">National dataset</h4>
-<p class="govuk-body">{{ consideration['dataset-name'] }}<br />
-  <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
-</p>
-<p class="govuk-body">Documentation url: <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
-<p class="govuk-body">Licence: {% if not consideration['license'] %}
+{% set LicenceHTML %}
+{% if not consideration['license'] %}
   <span class="govuk-tag govuk-tag--yellow">Missing</span>
   {% else %}
   <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a>
 {% endif %}</p>
+{% endset %}
+
+{% set nationalDatasetHTML %}
+{%- if consideration['needs-a-standard']|lower == "no"  %}
+<p class="govuk-body">{{ consideration['dataset-name'] }}<br />
+  <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
+</p>
+<p class="govuk-body">Documentation url: <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
+{% else %}
+  <span class="govuk-hint">Not a national dataset</span>
 {% endif -%}
+{% endset %}
+
+{{ govukSummaryList({
+  "card": {
+    "title": {
+      "text": "Summary"
+    }
+  },
+  "rows": [
+    {
+      "key": {
+        "text": "Description"
+      },
+      "value": {
+        "html": consideration['description']
+      }
+    },
+    {
+      "key": {
+        "text": "Status"
+      },
+      "value": {
+        "html": "<p class='govuk-body'><span class='govuk-tag govuk-tag--grey'>" + consideration['status'] + "</span></p>"
+      }
+    },
+    {
+      "key": {
+        "text": "Licence"
+      },
+      "value": {
+        "html": LicenceHTML
+      }
+    },
+    {
+      "key": {
+        "text": "Legislation"
+      },
+      "value": {
+        "html": legislationContent
+      }
+    },
+    {
+      "key": {
+        "text": "Who is asking for it?"
+      },
+      "value": {
+        "html": requestersHTML
+      }
+    },
+    {
+      "key": {
+        "text": "National dataset"
+      },
+      "value": {
+        "html": nationalDatasetHTML
+      }
+    }
+  ]
+}) }}
+
 
 {% if consideration['useful-links'] %}
 <h4 class="govuk-heading-s">Useful links</h4>
@@ -92,7 +152,6 @@
 {% endif %}
 
 {% if consideration['schema-urls'] or consideration['specification-url'] %}
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 <h3 class="govuk-heading-l">What we've modelled</h3>
 {% endif %}
 
