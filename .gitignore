@@ -20,3 +20,5 @@ env.bak/
 venv.bak/
 
 .python-version
+_bin/__pycache__/
+

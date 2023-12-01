@@ -15,6 +15,9 @@ serve::
 build::
 	bundle exec jekyll build --watch
 
+generate::
+	bundle exec jekyll build
+
 black:
 	black .
 
