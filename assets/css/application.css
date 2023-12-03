@@ -7550,3 +7550,10 @@
     .app-content-list__description {
       font-size: 14pt;
       line-height: 1.15; } }
+
+.app-heading--divider-top {
+  border-top: 3px solid #1d70b8;
+  padding-top: 15px; }
+  @media (min-width: 40.0625em) {
+    .app-heading--divider-top {
+      padding-top: 20px; } }

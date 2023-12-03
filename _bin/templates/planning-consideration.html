@@ -29,162 +29,161 @@
 {% endblock beforeContent %}
 
 {% block content %}
-<span class="govuk-caption-xl">Planning consideration</span>
-<h1 class="govuk-heading-xl">{{ consideration['concern'] }}</h1>
 
-{% set legislationContent %}
-  {%- if consideration['legislation'] %}
-  {{ consideration['legislation'] }}
-  {% else -%}
-  <span class="govuk-hint">Legislation not captured.</span>
-  {% endif -%}
-{% endset %}
+  <span class="govuk-caption-xl">Planning consideration</span>
+  <h1 class="govuk-heading-xl">{{ consideration['concern'] }}</h1>
 
-{%- set requesters = consideration['who-asked-for-it'].split(';') %}
-{% if requesters|length > 0 -%}
-  {% set requestersHTML %}
-  <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-    {%- for requester in requesters %}
-    <li>{{ requester }}</li>
-    {% endfor -%}
-  </ul>
- {% endset %}
-{%- endif %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      
+      <h2 class="govuk-heading-m">Description</h2>
+      <p class="govuk-body">{{ consideration['description'] }}</p>
 
-{% set LicenceHTML %}
-{% if not consideration['license'] %}
-  <span class="govuk-tag govuk-tag--yellow">Missing</span>
-  {% else %}
-  <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a>
-{% endif %}</p>
-{% endset %}
+      {% if consideration['schema-urls'] or consideration['specification-url'] %}
+        
+        <h3 class="govuk-heading-m">What we've modelled</h3>
 
-{% set nationalDatasetHTML %}
-{%- if consideration['needs-a-standard']|lower == "no"  %}
-<p class="govuk-body">{{ consideration['dataset-name'] }}<br />
-  <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
-</p>
-<p class="govuk-body">Documentation url: <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
-{% else %}
-  <span class="govuk-hint">Not a national dataset</span>
-{% endif -%}
-{% endset %}
+        {% if consideration['specification-url'] %}
+        <h4 class="govuk-heading-s">Specification</h4>
+        <p class="govuk-body">We have drafted <a href="{{ consideration['specification-url'] }}" class="govuk-link">a specification for {{ consideration['concern'] }}</a>.</p>
+        {% endif %}
 
-{{ govukSummaryList({
-  "card": {
-    "title": {
-      "text": "Summary"
-    }
-  },
-  "rows": [
-    {
-      "key": {
-        "text": "Description"
-      },
-      "value": {
-        "html": consideration['description']
-      }
-    },
-    {
-      "key": {
-        "text": "Status"
-      },
-      "value": {
-        "html": "<p class='govuk-body'><span class='govuk-tag govuk-tag--grey'>" + consideration['status'] + "</span></p>"
-      }
-    },
-    {
-      "key": {
-        "text": "Licence"
-      },
-      "value": {
-        "html": LicenceHTML
-      }
-    },
-    {
-      "key": {
-        "text": "Legislation"
-      },
-      "value": {
-        "html": legislationContent
-      }
-    },
-    {
-      "key": {
-        "text": "Who is asking for it?"
-      },
-      "value": {
-        "html": requestersHTML
-      }
-    },
-    {
-      "key": {
-        "text": "National dataset"
-      },
-      "value": {
-        "html": nationalDatasetHTML
-      }
-    }
-  ]
-}) }}
+        {% if consideration['schema-urls'] %}
+          <h4 class="govuk-heading-s">Schemas</h4>
+          <p class="govuk-body">We have created schemas for {{ consideration['concern'] }}.</p>
+          {%- set urls = consideration['schema-urls'].split(';') %}
+          {% if urls|length > 0 -%}
+            <ul class="govuk-list govuk-list--bullet">
+              {%- for url in urls %}
+              {%- set schema_name = url.split('/')[-1].replace('.md', "").replace("-", " ")|capitalize %}
+              <li><a href="{{ url }}" class="govuk-link">{{ schema_name }}</a></li>
+              {% endfor -%}
+            </ul>
+          {%- endif %}
+        {% endif %}
+
+      {% endif %}
+
+      {% if consideration['useful-links'] %}
+      <h4 class="govuk-heading-s">Useful links</h4>
+      {%- set _links = consideration['useful-links'].split(';') %}
+      <ul class="govuk-list govuk-list--bullet">
+        {% for _link in _links %}
+        {%- set parts = _link.split('|') %}
+        <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if consideration['partnering-with'] %}
+      <h4 class="govuk-heading-s">Who we are working with</h4>
+      {%- set _partners = consideration['partnering-with'].split(';') %}
+      <ul class="govuk-list govuk-list--bullet">
+        {% for _partner in _partners %}
+        {%- set parts = _partner.split('|') %}
+        <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      
+    </div>
+    <div class="govuk-grid-column-one-half">
+      
+      {% set legislationContent %}
+        {%- if consideration['legislation'] %}
+        {{ consideration['legislation'] }}
+        {% else -%}
+        <span class="govuk-hint">Legislation not captured.</span>
+        {% endif -%}
+      {% endset %}
+
+      {%- set requesters = consideration['who-asked-for-it'].split(';') %}
+      {% if requesters|length > 0 -%}
+        {% set requestersHTML %}
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+          {%- for requester in requesters %}
+          <li>{{ requester }}</li>
+          {% endfor -%}
+        </ul>
+      {% endset %}
+      {%- endif %}
+
+      {% set LicenceHTML %}
+      <p class="govuk-body">Licence:
+      {% if not consideration['license'] %}
+        <span class="govuk-tag govuk-tag--yellow">Missing licence</span>
+        {% else %}
+        <a href="{{ consideration['license'] }}" class="govuk-link">{{ consideration['license'] }}</a>
+      {% endif %}</p>
+      {% endset %}
+
+      {% set nationalDatasetHTML %}
+      {%- if consideration['needs-a-standard']|lower == "no"  %}
+      <p class="govuk-body">{{ consideration['dataset-name'] }}<br />
+        <a href="{{ consideration['url-of-national-dataset'] }}" class="govuk-link">{{ consideration['url-of-national-dataset'] }}</a>
+      </p>
+      <p class="govuk-body">Documentation url: <br> <a href="{{ consideration['national-dataset-documentation-page'] }}" class="govuk-link">{{ consideration['national-dataset-documentation-page'] }}</a></p>
+      {{ LicenceHTML }}
+      {% else %}
+        <span class="govuk-hint">Not a national dataset</span>
+      {% endif -%}
+      {% endset %}
+
+      {{ govukSummaryList({
+        "card": {
+          "title": {
+            "text": "Summary"
+          }
+        },
+        "rows": [
+          {
+            "key": {
+              "text": "Status"
+            },
+            "value": {
+              "html": "<p class='govuk-body'><span class='govuk-tag govuk-tag--grey'>" + consideration['status'] + "</span></p>"
+            }
+          },
+          {
+            "key": {
+              "text": "Legislation"
+            },
+            "value": {
+              "html": legislationContent
+            }
+          },
+          {
+            "key": {
+              "text": "Who is asking for it?"
+            },
+            "value": {
+              "html": requestersHTML
+            }
+          },
+          {
+            "key": {
+              "text": "National dataset"
+            },
+            "value": {
+              "html": nationalDatasetHTML
+            }
+          }
+        ]
+      }) }}
+
+    </div>  
+  </div>
 
 
-{% if consideration['useful-links'] %}
-<h4 class="govuk-heading-s">Useful links</h4>
-{%- set _links = consideration['useful-links'].split(';') %}
-<ul class="govuk-list govuk-list--bullet">
-  {% for _link in _links %}
-  {%- set parts = _link.split('|') %}
-  <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
-  {% endfor %}
-</ul>
-{% endif %}
+  <h4 class="govuk-heading-l app-heading--divider-top govuk-!-margin-top-3">Get involved</h4>
 
-{% if consideration['partnering-with'] %}
-<h4 class="govuk-heading-s">Who we are working with</h4>
-{%- set _partners = consideration['partnering-with'].split(';') %}
-<ul class="govuk-list govuk-list--bullet">
-  {% for _partner in _partners %}
-  {%- set parts = _partner.split('|') %}
-  <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
-  {% endfor %}
-</ul>
-{% endif %}
-
-{% if consideration['schema-urls'] or consideration['specification-url'] %}
-<h3 class="govuk-heading-l">What we've modelled</h3>
-{% endif %}
-
-{% if consideration['specification-url'] %}
-<h4 class="govuk-heading-s">Specification</h4>
-<p class="govuk-body">We have drafted <a href="{{ consideration['specification-url'] }}" class="govuk-link">a specification for {{ consideration['concern'] }}</a>.</p>
-{% endif %}
-
-{% if consideration['schema-urls'] %}
-<h4 class="govuk-heading-s">Schemas</h4>
-<p class="govuk-body">We have created schemas for {{ consideration['concern'] }}.</p>
-{%- set urls = consideration['schema-urls'].split(';') %}
-{% if urls|length > 0 -%}
-  <ul class="govuk-list govuk-list--bullet">
-    {%- for url in urls %}
-    {%- set schema_name = url.split('/')[-1].replace('.md', "").replace("-", " ")|capitalize %}
-    <li><a href="{{ url }}" class="govuk-link">{{ schema_name }}</a></li>
-    {% endfor -%}
-  </ul>
-{%- endif %}
-{% endif %}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-<h4 class="govuk-heading-l">Get involved</h4>
-
-<p class="govuk-body">
-{%- if consideration['discussion-number'] %}
-Comments and feedback on this planning consideration may be provided on the <a href="https://github.com/digital-land/data-standards-backlog/discussions/{{consideration['discussion-number']}}" class="govuk-link">GitHub discussion</a>.
-{% else -%}
-<span class="govuk-hint">No github discussion set up.</span>
-{% endif -%}
-</p>
+  <p class="govuk-body">
+    {%- if consideration['discussion-number'] %}
+    Comments and feedback on this planning consideration may be provided on the <a href="https://github.com/digital-land/data-standards-backlog/discussions/{{consideration['discussion-number']}}" class="govuk-link">GitHub discussion</a>.
+    {% else -%}
+    <span class="govuk-hint">No github discussion set up.</span>
+    {% endif -%}
+  </p>
 
 {% endblock content %}
 

@@ -16,3 +16,10 @@ $dl-frontend-images-path: "#{$baseurl}/assets/govuk-frontend/assets/images/";
 @import "components/subnavigation";
 @import "components/engagement-panel";
 @import "components/content-list";
+
+.app-heading {
+  &--divider-top {
+    border-top: 3px solid $govuk-brand-colour;
+    @include govuk-responsive-padding(4, "top");
+  }
+}
