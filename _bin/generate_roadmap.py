@@ -5,6 +5,13 @@ import jinja2
 from operator import itemgetter
 from jinja_filters import slugify_filter
 from utils import pythonic_keys
+from pathlib import Path
+
+
+def markdown_filter(text):
+    from markdown import markdown
+    if text is not None and isinstance(text, str):
+        return markdown(text)
 
 
 def setup_jinja():
@@ -36,6 +43,7 @@ def setup_jinja():
         "discussionsURL"
     ] = "https://github.com/digital-land/data-standards-backlog/discussions/"
     env.filters["slugify"] = slugify_filter
+    env.filters["markdown_filter"] = markdown_filter
 
     return env
 
@@ -93,10 +101,19 @@ def generate_roadmap():
         concerns=all_concerns,
         count=count,
     )
+    parent_dir = Path(__file__).parent.parent
+    planning_considerations = Path(parent_dir, "planning-considerations")
     for concern in all_concerns:
         concern = pythonic_keys(concern)
+        slug = slugify_filter(concern["concern"])
+        markdown_file = Path(planning_considerations, f"{slug}.md")
+
+        if markdown_file.exists():
+            with open(markdown_file, "r") as f:
+                concern["markdown"] = f.read()
+
         render(
-            f"./what-we-are-working-on/planning-consideration/{slugify_filter(concern['concern'])}/index.html",
+            f"./what-we-are-working-on/planning-consideration/{slug}/index.html",
             planning_consideration_template,
             consideration=concern,
         )

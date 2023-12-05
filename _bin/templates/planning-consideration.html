@@ -35,12 +35,12 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
-      
+
       <h2 class="govuk-heading-m">Description</h2>
       <p class="govuk-body">{{ consideration['description'] }}</p>
 
       {% if consideration['schema-urls'] or consideration['specification-url'] %}
-        
+
         <h3 class="govuk-heading-m">What we've modelled</h3>
 
         {% if consideration['specification-url'] %}
@@ -85,10 +85,10 @@
         {% endfor %}
       </ul>
       {% endif %}
-      
+
     </div>
     <div class="govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
-      
+
       {% set legislationContent %}
         {%- if consideration['legislation'] %}
         {{ consideration['legislation'] }}
@@ -171,7 +171,11 @@
         ]
       }) }}
 
-    </div>  
+      <!-- TODO @paulsmith ready for you to work with -->
+      <!-- <h4 class="govuk-heading-m">Documentation</h4>
+      <p>{{ consideration.markdown | markdown_filter }}</p> -->
+
+    </div>
   </div>
 
 

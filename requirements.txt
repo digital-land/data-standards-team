@@ -5,3 +5,4 @@ oauth2client
 -e git+https://github.com/digital-land/digital-land-frontend.git#egg=digital_land_frontend
 govuk-frontend-jinja
 python-dotenv
+markdown
