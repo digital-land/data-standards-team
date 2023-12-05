@@ -39,7 +39,17 @@
       <h2 class="govuk-heading-m">Description</h2>
       <p class="govuk-body">{{ consideration['description'] }}</p>
 
+      {% if not consideration.markdown | markdown_filter == None %}        
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <div class="markdown-content">
+          {{ consideration.markdown | markdown_filter }}
+        </div>
+        <!-- /.markdown-content -->
+      {% endif %}
+
       {% if consideration['schema-urls'] or consideration['specification-url'] %}
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">What we've modelled</h3>
 
@@ -170,10 +180,6 @@
           }
         ]
       }) }}
-
-      <!-- TODO @paulsmith ready for you to work with -->
-      <!-- <h4 class="govuk-heading-m">Documentation</h4>
-      <p>{{ consideration.markdown | markdown_filter }}</p> -->
 
     </div>
   </div>
