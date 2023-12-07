@@ -120,6 +120,17 @@
       {% endset %}
       {%- endif %}
 
+      {%- set relatedpcs = consideration['related-planning-considerations'].split(';') %}
+      {% if relatedpcs|length > 0 -%}
+        {% set relatedHTML %}
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+          {%- for related in relatedpcs %}
+          <li><a href="{{baseurl}}/what-we-are-working-on/planning-consideration/{{ consideration['concern']|slugify }}" class="govuk-link">{{ related }}</a></li>
+          {% endfor -%}
+        </ul>
+      {% endset %}
+      {%- endif %}
+
       {% set LicenceHTML %}
       <p class="govuk-body">Licence:
       {% if not consideration['license'] %}
@@ -178,6 +189,14 @@
             },
             "value": {
               "html": nationalDatasetHTML
+            }
+          },
+          {
+            "key": {
+              "text": "Related planning considerations"
+            },
+            "value": {
+              "html": relatedHTML
             }
           }
         ]
