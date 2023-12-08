@@ -47,7 +47,7 @@
         <!-- /.markdown-content -->
       {% endif %}
 
-      {% if consideration['schema-urls'] or consideration['specification-url'] %}
+      {% if consideration['schemas'] or consideration['specification-url'] %}
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -58,18 +58,14 @@
         <p class="govuk-body">We have drafted <a href="{{ consideration['specification-url'] }}" class="govuk-link">a specification for {{ consideration['concern'] }}</a>.</p>
         {% endif %}
 
-        {% if consideration['schema-urls'] %}
+        {% if consideration['schemas'] %}
           <h4 class="govuk-heading-s">Schemas</h4>
           <p class="govuk-body">We have created schemas for {{ consideration['concern'] }}.</p>
-          {%- set urls = consideration['schema-urls'].split(';') %}
-          {% if urls|length > 0 -%}
-            <ul class="govuk-list govuk-list--bullet">
-              {%- for url in urls %}
-              {%- set schema_name = url.split('/')[-1].replace('.md', "").replace("-", " ")|capitalize %}
-              <li><a href="{{ url }}" class="govuk-link">{{ schema_name }}</a></li>
+          <ul class="govuk-list govuk-list--bullet">
+              {%- for schema in consideration['schemas'] %}
+              <li><a href="{{ schema.url }}" class="govuk-link">{{ schema.name }}</a></li>
               {% endfor -%}
-            </ul>
-          {%- endif %}
+          </ul>
         {% endif %}
 
       {% endif %}

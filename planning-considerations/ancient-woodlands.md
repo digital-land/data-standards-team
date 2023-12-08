@@ -1,3 +1,10 @@
+---
+schemas:
+  - name: Ancient woodland
+    url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/ancient-woodland.md
+  - name: Ancient woodland status
+    url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/ancient-woodland-status.md
+---
 ### Why are we looking at it
 
 The more we know about the planning consideration the clearer we can be with this section
