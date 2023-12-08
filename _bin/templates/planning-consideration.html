@@ -79,13 +79,11 @@
       </ul>
       {% endif %}
 
-      {% if consideration['partnering-with'] %}
+      {% if consideration['partners'] %}
       <h4 class="govuk-heading-s">Who we are working with</h4>
-      {%- set _partners = consideration['partnering-with'].split(';') %}
       <ul class="govuk-list govuk-list--bullet">
-        {% for _partner in _partners %}
-        {%- set parts = _partner.split('|') %}
-        <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+        {% for partner in consideration['partners'] %}
+        <li><a href="{{ partner['url'] }}" class="govuk-link">{{ partner['name'] }}</a></li>
         {% endfor %}
       </ul>
       {% endif %}
