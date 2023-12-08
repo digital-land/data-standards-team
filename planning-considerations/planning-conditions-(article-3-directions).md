@@ -1,3 +1,8 @@
+---
+schemas:
+  - name: Planning application condition
+    url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/planning-application-condition.md
+---
 ### Why are we looking at it
 
 When granting some planning applications Local planning authorities can "granted with conditions" - these conditions, what we call planning conditions, become restrictions on any future development that can be done on a property/site.

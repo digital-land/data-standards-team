@@ -1,3 +1,10 @@
+---
+links:
+  - title: Designing Gypsy and Traveller Sites
+    url: https://assets.publishing.service.gov.uk/media/5a79e68040f0b670a8026416/designinggypsysites.pdf
+  - title: Traveller caravan counts
+    url: https://www.gov.uk/government/collections/traveller-caravan-count
+---
 ### Why are we looking at it
 
 The Government’s national planning policy framework includes commitments to deliver enough sites of a high quality to support the Gypsy and Traveller communities. To know whether it is achieving it's intend goal the government needs to track the demand, location of that demand and whether local supply is able to meet that demand.

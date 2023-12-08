@@ -1,3 +1,10 @@
+---
+schemas: 
+  - name: Permitted development right
+    url: https://github.com/digital-land/specification/blob/main/content/dataset/permitted-development-right.md
+  - name: Permitted development right part
+    url: https://github.com/digital-land/specification/blob/main/content/dataset/permitted-development-right-part.md
+---
 ### Why are we looking at it
 
 Permitted development rights (PDRs) allow householders to improve and extend their homes without the need to apply for planning permission where that would be out of proportion with the impact of works carried out.
