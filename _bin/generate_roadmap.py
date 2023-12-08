@@ -10,6 +10,7 @@ from pathlib import Path
 
 def markdown_filter(text):
     from markdown import markdown
+
     if text is not None and isinstance(text, str):
         return markdown(text)
 

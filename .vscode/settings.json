@@ -1,7 +1,10 @@
 {
-    "liquid.format.enable": false,
     "[liquid]": {
         "editor.defaultFormatter": "sissel.shopify-liquid",
         "editor.formatOnSave": true
+    },
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true
     }
 }
