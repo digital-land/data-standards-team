@@ -1,12 +1,14 @@
 # current git branch
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
+js-init:
+	npm install
+
 python-init::
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
-	npm install
 
-init:: python-init
+init:: python-init js-init
 	bundle install
 
 serve::

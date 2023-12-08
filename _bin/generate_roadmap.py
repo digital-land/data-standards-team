@@ -1,6 +1,7 @@
 import os
 import csv
 import jinja2
+import frontmatter
 
 from operator import itemgetter
 from jinja_filters import slugify_filter
@@ -111,7 +112,9 @@ def generate_roadmap():
 
         if markdown_file.exists():
             with open(markdown_file, "r") as f:
-                concern["markdown"] = f.read()
+                concern_markdown = frontmatter.load(f)
+                concern["markdown"] = concern_markdown.content
+                concern.update(concern_markdown.metadata)
 
         render(
             f"./what-we-are-working-on/planning-consideration/{slug}/index.html",

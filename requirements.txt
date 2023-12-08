@@ -6,3 +6,4 @@ oauth2client
 govuk-frontend-jinja
 python-dotenv
 markdown
+python-frontmatter
