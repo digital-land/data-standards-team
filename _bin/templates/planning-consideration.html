@@ -70,13 +70,11 @@
 
       {% endif %}
 
-      {% if consideration['useful-links'] %}
+      {% if consideration['links'] %}
       <h4 class="govuk-heading-s">Useful links</h4>
-      {%- set _links = consideration['useful-links'].split(';') %}
       <ul class="govuk-list govuk-list--bullet">
-        {% for _link in _links %}
-        {%- set parts = _link.split('|') %}
-        <li><a href="{{ parts[1] }}" class="govuk-link">{{ parts[0] }}</a></li>
+        {% for _link in consideration['links'] %}
+        <li><a href="{{ _link['url'] }}" class="govuk-link">{{ _link['title'] }}</a></li>
         {% endfor %}
       </ul>
       {% endif %}
