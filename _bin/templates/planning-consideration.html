@@ -39,10 +39,10 @@
       <h2 class="govuk-heading-m">Description</h2>
       <p class="govuk-body">{{ consideration['description'] }}</p>
 
-      {% if not consideration.markdown | markdown_filter == None %}        
+      {% if not consideration.markdown | markdown_filter == None and not consideration.markdown | markdown_filter == "" %}
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
         <div class="markdown-content">
-          {{ consideration.markdown | markdown_filter }}
+          <p>{{ consideration.markdown | markdown_filter }}</p>
         </div>
         <!-- /.markdown-content -->
       {% endif %}
