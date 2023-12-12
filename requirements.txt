@@ -7,3 +7,4 @@ govuk-frontend-jinja
 python-dotenv
 markdown
 python-frontmatter
+jsonpickle

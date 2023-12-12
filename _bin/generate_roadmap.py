@@ -2,12 +2,17 @@ import os
 import csv
 import jinja2
 import frontmatter
+import json
+import jsonpickle
 
 from operator import itemgetter
 from jinja_filters import slugify_filter
 from utils import pythonic_keys
 from pathlib import Path
 
+
+def debug_filter(thing):
+  return f"<script>console.log({json.dumps(json.loads(jsonpickle.encode(thing)), indent=2)});</script>"
 
 def markdown_filter(text):
     from markdown import markdown
@@ -46,6 +51,7 @@ def setup_jinja():
     ] = "https://github.com/digital-land/data-standards-backlog/discussions/"
     env.filters["slugify"] = slugify_filter
     env.filters["markdown_filter"] = markdown_filter
+    env.filters["debug"] = debug_filter
 
     return env
 

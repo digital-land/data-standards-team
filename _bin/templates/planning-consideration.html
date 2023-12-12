@@ -102,14 +102,15 @@
       {% endset %}
 
       {%- set requesters = consideration['who-asked-for-it'].split(';') %}
-      {% if requesters|length > 0 -%}
+      {% set hasRequesters = requesters|length > 0 and requesters[0] != "" %}
+      {% if hasRequesters %}
         {% set requestersHTML %}
-        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-          {%- for requester in requesters %}
-          <li>{{ requester }}</li>
-          {% endfor -%}
-        </ul>
-      {% endset %}
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+            {%- for requester in requesters %}
+            <li>{{ requester }}</li>
+            {% endfor -%}
+          </ul>
+        {% endset %}
       {%- endif %}
 
       {%- set relatedHTML %}
@@ -178,7 +179,7 @@
             "value": {
               "html": requestersHTML
             }
-          },
+          } if hasRequesters else None,
           {
             "key": {
               "text": "National dataset"
