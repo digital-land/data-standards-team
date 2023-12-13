@@ -46,7 +46,7 @@
       {% for concern in concerns['In development'] %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
         </dt>
         <dd class="govuk-summary-list__value">
           {{ concern['Description'] }}
@@ -72,7 +72,7 @@
       {% for concern in concerns['Discovery'] %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
         </dt>
         <dd class="govuk-summary-list__value">
           {{ concern['Description'] }}
@@ -96,9 +96,11 @@
 
     <dl class="govuk-summary-list">
       {% for concern in concerns['Next'] %}
+      {{ concern | debug | safe }}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {{ concern['Concern'] }}
+          {# {{ concern['Concern'] }} #}
+          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
         </dt>
         <dd class="govuk-summary-list__value">
           {{ concern['Description'] }}
