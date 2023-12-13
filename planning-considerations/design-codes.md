@@ -8,7 +8,7 @@ schemas:
     url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/design-code-rule.md
   - name: Design code status
     url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/design-code-status.md
-  - name: design code category
+  - name: Design code category
     url: https://raw.githubusercontent.com/digital-land/specification/main/content/dataset/design-code-category.md
 links:
   - title: National model design code
