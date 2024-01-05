@@ -24,10 +24,14 @@ Each standard provides a set of rules and guidelines for producing and organisin
 If you think you need a data standard, we’ll need you to provide us with certain information to start with - we’ll need your domain expertise.
 We’ll then run our data design process so we can understand the data need for the planning consideration and gather enough information to start working on a data model.
 We’ll then publish a technical specification for the data model we’re working on at the earliest possible opportunity.
-Ways of working
+
+## Ways of working
 We’re a multidisciplinary team consisting of interaction, service and content designers, data experts, delivery managers and business analysts. 
 
 We publish details of what we’re working on on our website as well as publishing our regular weeknotes.
+
+We’ll set up a collaborative space for more focused input from LPAs and anyone else that should be involved. This will probably be a Miro or Mural board. We also have open
+Github discussions for sharing our progress and asking questions to the community.
 
 To get in touch with our team, just drop Matt Lucht an email.
 
