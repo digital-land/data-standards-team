@@ -1,4 +1,10 @@
+title 	permalink 	layout
 Terms of reference
+
+/about/:basename
+	
+content-page
+
 ## Background and purpose
 
 The Department for Levelling Up, Housing and Communities is developing data standards to make land and housing data easier to find, understand, use and trust. 
