@@ -1,6 +1,6 @@
 ---
 title: Terms of reference for working with the data standards team
-permalink: /:basename
+permalink: /about/:basename
 layout: content-page
 ---
 
