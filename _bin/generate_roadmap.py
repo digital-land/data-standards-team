@@ -8,11 +8,13 @@ import jsonpickle
 from operator import itemgetter
 from jinja_filters import slugify_filter
 from utils import pythonic_keys
+from planningconsiderations import get_planning_considerations
 from pathlib import Path
 
 
 def debug_filter(thing):
-  return f"<script>console.log({json.dumps(json.loads(jsonpickle.encode(thing)), indent=2)});</script>"
+    return f"<script>console.log({json.dumps(json.loads(jsonpickle.encode(thing)), indent=2)});</script>"
+
 
 def markdown_filter(text):
     from markdown import markdown
@@ -69,33 +71,15 @@ def make_id(name):
     return name.lower().replace(" ", "-")
 
 
-def get_planning_concerns():
-    planning_concerns = {}
-
-    # Open the CSV file
-    with open("_data/planning-concerns-backlog.csv", "r") as file:
-        reader = csv.DictReader(file)
-
-        # Iterate over each row in the CSV
-        for row in reader:
-            # Access the values in each column using the dictionary keys
-            # Create a Python dictionary for each row
-            entry = dict(row)
-            status = entry["Status"]
-
-            planning_concerns.setdefault(status, []).append(entry)
-
-    return planning_concerns
-
-
 def generate_roadmap():
     env = setup_jinja()
-    concerns = get_planning_concerns()
+    concerns = get_planning_considerations()
     count = sum([len(concerns[bucket]) for bucket in concerns.keys()])
     all_concerns = sorted(
         [concern for bucket in concerns.keys() for concern in concerns[bucket]],
         key=itemgetter("Concern"),
     )
+
     current_work_template = env.get_template("what-we-are-working-on.html")
     backlog_template = env.get_template("backlog.html")
     planning_consideration_template = env.get_template("planning-consideration.html")

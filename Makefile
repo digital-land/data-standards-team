@@ -43,6 +43,9 @@ fetch-backlog-data:
 pages: 
 	python _bin/generate_roadmap.py
 
+stage-count:
+	python3 _bin/planningconsiderations.py
+
 status:
 	git status --ignored
 
