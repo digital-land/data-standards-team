@@ -17,7 +17,8 @@ def get_planning_considerations():
             entry = dict(row)
             status = entry["Status"]
 
-            planning_considerations.setdefault(status, []).append(entry)
+            if entry["Concern"] != "":
+                planning_considerations.setdefault(status, []).append(entry)
 
     return planning_considerations
 
