@@ -46,6 +46,9 @@ pages:
 stage-count:
 	python3 _bin/planningconsiderations.py
 
+diagram:
+	python3 _bin/stages-svg.py
+
 status:
 	git status --ignored
 

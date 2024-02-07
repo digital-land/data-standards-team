@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1293 694" style="enable-background:new 0 0 1293 694;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.0667,12.0667;}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.1081,12.1081;}
+	.st3{fill:#666666;}
+	.st4{font-family:'Helvetica-Bold';}
+	.st5{font-size:12px;}
+	.st6{fill:#1875A8;}
+	.st7{fill:#006837;}
+	.st8{fill:#CCEAFB;}
+	.st9{font-size:36px;}
+	.st10{fill:#296457;}
+	.st11{fill:#76A945;}
+	.st12{fill:#B7B7B7;}
+	.st13{fill:#FFFDF6;}
+</style>
+<g>
+	<g>
+		<line class="st0" x1="178.07" y1="634" x2="178.07" y2="628"/>
+		<line class="st1" x1="178.07" y1="615.93" x2="178.07" y2="91.03"/>
+		<line class="st0" x1="178.07" y1="85" x2="178.07" y2="79"/>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="976" y1="634" x2="976" y2="628"/>
+		<line class="st2" x1="976" y1="615.89" x2="976" y2="186.05"/>
+		<line class="st0" x1="976" y1="180" x2="976" y2="174"/>
+	</g>
+</g>
+<g id="labels">
+	<text transform="matrix(1 0 0 1 83.5479 657.2324)" class="st3 st4 st5">Backlog</text>
+	<text transform="matrix(1 0 0 1 221.8789 657.2324)" class="st6 st4 st5">Screening</text>
+	<text transform="matrix(1 0 0 1 344.874 657.2324)" class="st6 st4 st5">Researching</text>
+	<text transform="matrix(1 0 0 1 472.5596 657.2324)" class="st6 st4 st5">Co-designing</text>
+	<text transform="matrix(1 0 0 1 597.542 657.2324)" class="st6 st4 st5">Test and iterate</text>
+	<text transform="matrix(1 0 0 1 742.8975 657.2324)" class="st6 st4 st5">Go / no-go</text>
+	<text transform="matrix(1 0 0 1 868.2109 657.2324)"><tspan x="0" y="0" class="st6 st4 st5">Prepared for </tspan><tspan x="11.68" y="18" class="st6 st4 st5">platform</tspan></text>
+	<text transform="matrix(1 0 0 1 1004.2227 657.2324)" class="st7 st4 st5">On the platform</text>
+	<text transform="matrix(1 0 0 1 1157.8779 657.2324)" class="st3 st4 st5">Archive</text>
+</g>
+<g id="backlog">
+	<path class="st8 bar" d="M165,79H48v72h15l-15,23v460h117V174h-15l15-23V79z M63,174l15-23h14l-15,23H63z M92,174l15-23h14l-15,23H92z
+		 M135,174h-14l15-23h14L135,174z"/>
+	<text transform="matrix(1 0 0 1 58.4785 115.373)" class="st6 st4 st9 label">3</text>
+</g>
+<g id="researching">
+	<g>
+		<rect x="322" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<!--<text transform="matrix(1 0 0 1 332.4785 210.373)" class="st8 st4 st9 label">3</text>-->
+  <text x="332" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="screening">
+	<g>
+		<rect x="192" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<text x="202" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="codesigning">
+	<g>
+		<rect x="452" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<text x="462" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="test-and-iterate">
+	<g>
+		<rect x="583" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<text x="593" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="go-no-go">
+	<g>
+		<rect x="714" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<text x="724" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="prepared-for-platform">
+	<g>
+		<rect x="845" y="174" class="st6 bar" width="117" height="460"/>
+	</g>
+	<text x="855" y="210" class="st8 st4 st9 label">3</text>
+</g>
+<g id="on-the-platform">
+	<g>
+		<rect x="990" y="174" class="st10 bar" width="117" height="460"/>
+	</g>
+	<text x="1000" y="210" class="st11 st4 st9 label">3</text>
+</g>
+<g id="archived">
+	<g>
+		<rect x="1121" y="174" class="st12 bar" width="117" height="460"/>
+	</g>
+	<text x="1131" y="210" class="st13 st4 st9 label">3</text>
+</g>
+</svg>
