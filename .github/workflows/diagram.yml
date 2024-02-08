@@ -36,11 +36,17 @@ jobs:
     - name: Install build dependencies
       run: make python-init
 
+    - name: Fetch latest data
+      run: make fetch-backlog-data
+
     - name: Generate diagram
       run: make diagram
 
     - name: Output git status
       run: make status
+
+    - name: Commit data
+      run: make commit-data
 
     - name: Commit stage count diagram
       run: make commit-diagram
