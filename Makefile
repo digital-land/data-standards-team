@@ -59,3 +59,7 @@ commit-roadmap::
 commit-data::
 	git add _data
 	git diff --quiet && git diff --staged --quiet || (git commit -m "Fetched latest backlog data $(shell date +%F)"; git push origin $(BRANCH))
+
+commit-diagram::
+	git add assets/images/stage-counts
+	git diff --quiet && git diff --staged --quiet || (git commit -m "Added latest stage count diagram $(shell date +%F)"; git push origin $(BRANCH))

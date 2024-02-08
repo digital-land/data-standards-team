@@ -47,3 +47,6 @@ jobs:
 
     - name: Commit roadmap pages
       run: make commit-roadmap
+
+    - name: Commit stage count diagram
+      run: make commit-diagram
