@@ -8,3 +8,4 @@ python-dotenv
 markdown
 python-frontmatter
 jsonpickle
+lxml
