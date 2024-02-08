@@ -1,4 +1,4 @@
-name: Build roadmap pages
+name: Generate stage count diagram
 
 on:
   push:
@@ -35,9 +35,6 @@ jobs:
 
     - name: Install build dependencies
       run: make python-init
-
-    - name: Build pages
-      run: make pages
 
     - name: Generate diagram
       run: make diagram
