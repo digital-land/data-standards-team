@@ -43,7 +43,7 @@
 </g>
 <g id="backlog">
 	<path class="st8 bar" d="M165,79H48v72h15l-15,23v460h117V174h-15l15-23V79z M63,174l15-23h14l-15,23H63z M92,174l15-23h14l-15,23H92z    M135,174h-14l15-23h14L135,174z"/>
-	<text transform="matrix(1 0 0 1 58.4785 115.373)" class="st6 st4 st9 label">270</text>
+	<text transform="matrix(1 0 0 1 58.4785 115.373)" class="st6 st4 st9 label">269</text>
 </g>
 <g id="researching">
 	<g>
@@ -54,9 +54,9 @@
 </g>
 <g id="screening">
 	<g>
-		<rect x="192" y="470" class="st6 bar" width="117" height="164"/>
+		<rect x="192" y="457" class="st6 bar" width="117" height="177"/>
 	</g>
-	<text x="202" y="506" class="st8 st4 st9 label">10</text>
+	<text x="202" y="493" class="st8 st4 st9 label">11</text>
 </g>
 <g id="codesigning">
 	<g>
