@@ -79,13 +79,21 @@ def generate_roadmap():
         [concern for bucket in concerns.keys() for concern in concerns[bucket]],
         key=itemgetter("Concern"),
     )
+    emerging_priorities = [
+        consideration
+        for consideration in all_concerns
+        if consideration["Status"] == "Prioritised backlog"
+    ]
 
     current_work_template = env.get_template("what-we-are-working-on.html")
     backlog_template = env.get_template("backlog.html")
     planning_consideration_template = env.get_template("planning-consideration.html")
 
     render(
-        "./what-we-are-working-on/index.html", current_work_template, concerns=concerns
+        "./what-we-are-working-on/index.html",
+        current_work_template,
+        concerns=concerns,
+        emerging_priorities=emerging_priorities,
     )
     render(
         "./what-we-are-working-on/planning-consideration/index.html",

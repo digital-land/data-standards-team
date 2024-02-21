@@ -5,6 +5,37 @@
 <link href="/data-standards/assets/css/application.css" rel="stylesheet" />
 {% endblock stylesheets -%}
 
+{% macro considerationListItem(consideration) %}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ consideration['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ consideration['Concern'] }}</a>
+    <p class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+      <span class="govuk-tag govuk-tag--blue">{{ consideration['Stage'] }}</span>
+    </p>
+  </dt>
+  <dd class="govuk-summary-list__value">
+    <p class="govuk-body">We think this supoorts:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      {%- set supports = consideration['What does it support'].split(";") -%}
+      {%- for goal in supports %}
+      <li>{{ goal|lower }}</li>
+      {% endfor -%}
+    </ul>
+  </dd>
+  <dd class="govuk-summary-list__actions govuk-!-text-align-left">
+    <p class="govuk-body govuk-!-margin-bottom-0">
+    {%- if consideration['discussion-number'] %}
+    <a class="govuk-link" href="{{ discussionsURL }}{{ consideration['discussion-number'] }}">
+    Discuss {{ consideration['Concern'] }}</a>
+    {%- elif consideration['issue-number'] %}
+    <a class="govuk-link" href="{{ issuesURL }}{{ consideration['issue-number'] }}">
+    Discuss {{ consideration['Concern'] }}</a>
+    {% endif -%}
+    </p>
+  </dd>
+</div>
+{% endmacro %}
+
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="app-header__container govuk-header__container govuk-width-container">
@@ -47,31 +78,7 @@
     <dl class="govuk-summary-list">
       {%- set active_considerations = concerns['Research'] + concerns['Co-design'] + concerns['Test and iterate'] + concerns['Ready for go/no-go'] %}
       {% for concern in active_considerations %}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
-          <br />
-          <span class="govuk-tag">{{ concern['Stage'] }}</span>
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p class="govuk-body">We think this supoorts:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            {%- set supports = concern['What does it support'].split(";") -%}
-            {%- for goal in supports %}
-            <li>{{ goal|lower }}</li>
-            {% endfor -%}
-          </ul>
-        </dd>
-        <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['discussion-number'] %}
-          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {%- elif concern['issue-number'] %}
-          <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {% endif -%}
-        </dd>
-      </div>
+      {{ considerationListItem(concern) }}
       {% endfor %}
     </dl>
 
@@ -82,52 +89,8 @@
     <p class="govuk-body">If you'd like to help us understand the data needs for these planning areas, join the conversation to see what we trying to find out.</p>
 
     <dl class="govuk-summary-list">
-      {% for concern in concerns['Discovery'] %}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['discussion-number'] %}
-          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {%- elif concern['issue-number'] %}
-          <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {% endif -%}
-        </dd>
-      </div>
-      {% endfor %}
-    </dl>
-
-    <h2 class="govuk-heading-l govuk-!-margin-top-9">Next priorities</h2>
-
-    <p class="govuk-body">We believe these planning areas we should look at next and we'd like your input to help us understand the space. We are particularly interested to here about the data used or produced, who needs to use it and what do they want to do with it.</p>
-
-    <dl class="govuk-summary-list">
-      {% for concern in concerns['Next'] %}
-      {{ concern | debug | safe }}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          {# {{ concern['Concern'] }} #}
-          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions govuk-!-text-align-left">
-          {%- if concern['discussion-number'] %}
-          <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {%- elif concern['issue-number'] %}
-          <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
-          Discuss {{ concern['Concern'] }}</a>
-          {% endif -%}
-        </dd>
-      </div>
+      {% for concern in emerging_priorities %}
+      {{ considerationListItem(concern) }}
       {% endfor %}
     </dl>
 
