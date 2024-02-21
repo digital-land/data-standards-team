@@ -53,15 +53,15 @@
         <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
       </dt>
       <dd class="govuk-summary-list__value">
-        {% if concern['Status'] == "Backlog" %}
+        {% if concern['Stage'] == "Backlog" %}
         {% set status_class = "grey" %}
-        {% elif concern['Status'] == "On the platform" %}
+        {% elif concern['Stage'] == "On the platform" %}
         {% set status_class = "green" %}
         {% else %}
         {% set status_class = "blue" %}
         {% endif %}
         <strong class="govuk-tag govuk-tag--{{ status_class }}">
-          {{ concern['Status'] }}
+          {{ concern['Stage'] }}
         </strong>
       </dd>
       <dd class="govuk-summary-list__actions">
