@@ -40,16 +40,27 @@
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">Working on now</h2>
 
-    <p class="govuk-body">If you'd like to help us explore and shape these standards, join the conversation to see what needs to figure out.</p>
+    <p class="govuk-body">These are the planning considerations we are currently taking through our design process.</p>
+
+    <p class="govuk-body">If you'd like to help us explore and shape these standards, join the conversation.</p>
 
     <dl class="govuk-summary-list">
-      {% for concern in concerns['In development'] %}
+      {%- set active_considerations = concerns['Research'] + concerns['Co-design'] + concerns['Test and iterate'] + concerns['Ready for go/no-go'] %}
+      {% for concern in active_considerations %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
+          <br />
+          <span class="govuk-tag">{{ concern['Stage'] }}</span>
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ concern['Description'] }}
+          <p class="govuk-body">We think this supoorts:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            {%- set supports = concern['What does it support'].split(";") -%}
+            {%- for goal in supports %}
+            <li>{{ goal|lower }}</li>
+            {% endfor -%}
+          </ul>
         </dd>
         <dd class="govuk-summary-list__actions govuk-!-text-align-left">
           {%- if concern['discussion-number'] %}
@@ -64,7 +75,9 @@
       {% endfor %}
     </dl>
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-9">Researching</h2>
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">Emerging priorities</h2>
+
+    <p class="govuk-body">These are the planning considerations that are becoming priorities based on department objectives and our analysis of what will add the most value.</p>
 
     <p class="govuk-body">If you'd like to help us understand the data needs for these planning areas, join the conversation to see what we trying to find out.</p>
 

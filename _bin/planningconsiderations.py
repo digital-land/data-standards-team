@@ -15,7 +15,7 @@ def get_planning_considerations():
             # Access the values in each column using the dictionary keys
             # Create a Python dictionary for each row
             entry = dict(row)
-            status = entry["Status"]
+            status = entry["Stage"]
 
             if entry["Concern"] != "":
                 planning_considerations.setdefault(status, []).append(entry)
