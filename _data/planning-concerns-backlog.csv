@@ -59,7 +59,7 @@ Community infrastructure levy (CIL) charging zones,Backlog,Backlog,,,,,,,,,,,,,,
 Completion notices,Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,Documents that set a date when work on a new building or conversion should be complete,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,,
 Compulsory purchase orders,Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,Orders that allow a public authority to acquire land without the consent of the owner,,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,,
 Conservation areas,Piloting,On the platform,,✓,,,,Modern planning software,,✓,,,✓,✓,,,,✓,,,,,,,An area of special architectural or historic interest with a character or appearance that must be preserved or enhanced ,,,✓,,,✓,,Yes,,Local planning authorities,Local planning authorities;Historic England; Digital Land,Multiple,Large,,Local land charge,,,,,,Open planning software;Development consent orders (NSIP);Environmental planning assessment,8,33,https://digital-land.github.io/specification/specification/conservation-area/
-Local plan consultations and representations,On the platform,Screen,,,,,,Faster plan making,,,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,57,
+Local plan consultations and representations,Prioritised backlog,Screen,,,,,,Faster plan making,,,,,✓,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,57,
 Contaminated land,On the platform,Backlog,,,,,,,,,,,,,,,,,,,,,,,"Land where substances are causing or could cause:
 
 - significant harm to people, property or protected species
@@ -315,7 +315,7 @@ Species data,Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,Curated database of UK wildli
 Strategic Industrial Location (SIL),Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,"London’s largest concentrations of industrial, logistics and related capacity for uses that support the functioning of London’s economy",,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,,
 Strategic road network,Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,"4,500 miles of motorways and major A roads ",,,,,,,,,,Highways England,,,,,,,,,,,,,,
 Suitable Alternative Natural Greenspace (SANG),Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,,SANG provides an alternative greenspace to attract residents of new developments away from the protected and vulnerable sites,,,✓,,,,,,,,,,,,,,,,,,,,,
-Housing numbers,Backlog,Research,,,,,,Faster local plans,,,,,✓,,,,,,,,,,,,Number of new homes the government aims to build per year,,,✓,,✓,,,Yes,,Local planning authorities,,,,,,,,,,,,,,
+Housing numbers,Backlog,Research,,,,,,Faster local plans,,,,,✓,,,,,,,,,,,,Number of new homes the government aims to build per year,,,✓,,✓,,,Yes,,Local planning authorities,,,,,,,,,,,,,56,
 Tennis courts,Backlog,Backlog,,,,,,,,,,,,,,,,,,✓,,,,,Courts or areas with a net across the middle used for playing tennis,,,✓,,,,,,,Ordnance Survey,,,,,,,,,,,Environmental planning assessment,,,
 TOID,Backlog,Backlog,,,,,,,,,,,,,,,,,,,,,,✓,A unique reference identifier assigned by Ordnance Survey to identify every topographical feature ,,,,,,,,,,,,,,,,,https://osdatahub.os.uk/downloads/open/OpenTOID,,,,,,,
 Town centre boundaries,Backlog,Backlog,,,,,,,,,,,✓,,,,,,,,,,,,"Location, extent and function of retail areas",,,,,,,,Yes,,Local planning authorities,,,,,,,,,,,,,,
