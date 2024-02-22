@@ -23,14 +23,20 @@
 {% endblock header %}
 
 {% block beforeContent %}
+{% if filter %}
+<a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/" class="govuk-back-link">Back to full backlog</a>
+{% else %}
 <a href="{{ baseurl }}/what-we-are-working-on" class="govuk-back-link">Back to What we are working on</a>
+{% endif %}
 {% endblock beforeContent %}
 
 {% block content %}
 <span class="govuk-caption-xl">Data standards</span>
 <h1 class="govuk-heading-xl">Backlog of planning considerations</h1>
 
-<p class="govuk-body-l">We currently have a total of <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">{{ count }}</span> planning considerations on our backlog.</p>
+<p class="govuk-body-l">We currently have a total of <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">{{ count }}</span> planning considerations 
+{% if filter %}in the <strong class="govuk-!-font-weight-bold">{{ filter }}</strong> stage of our process
+{%- else %}on our backlog{% endif %}.</p>
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -39,47 +45,79 @@
   <input class="dl-list-filter__input govuk-input" type="text" id="filter-organisations-list" placeholder="For example, Planning conditions">
 </form>
 
-<div class="concerns-list__wrapper">
+{%- if filter %}
+  {%- if filter == "Backlog" %}
+  {%- set status_class = "grey" %}
+  {%- elif filter == "On the platform" %}
+  {%- set status_class = "green" %}
+  {%- elif filter == "Archived" %}
+  {%- set status_class = "orange" %}
+  {%- else %}
+  {%- set status_class = "blue" %}
+  {%- endif %}
+<p class="govuk-body">Filtered by <span class="govuk-tag govuk-tag--{{ status_class }}">{{ filter }}</span> stage</p>
+{% endif -%}
 
-  <div class="concerns-list__count__wrapper">
-    <p class="govuk-body">Showing <span class="js-accessible-list-filter__count">{{ count }}</span> planning considerations</p>
-    <span class="govuk-body govuk-!-font-weight-bold govuk-visually-hidden js-list-filter__count" aria-hidden="true">{{ count }}</span>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="app-sub-navigation">
+      <h3 class="govuk-heading-s">Filter by stage</h3>
+      <ul class="app-sub-navigation__section">
+        {% for stage in stages %}
+        <li class="app-sub-navigation__section-item{% if filter == stage[0] %} app-sub-navigation__section-item--current{% endif %}">
+          <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ stage[1] }}" class="app-sub-navigation__link">{{ stage[0] }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </div>
+  <div class="govuk-grid-column-three-quarters">
+    <div class="concerns-list__wrapper">
 
-  <dl class="govuk-summary-list" data-filter="list">
-    {% for concern in concerns -%}
-    <div class="govuk-summary-list__row" data-filter="item">
-      <dt class="govuk-summary-list__key" data-filter="match-content">
-        <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
-      </dt>
-      <dd class="govuk-summary-list__value">
-        {% if concern['Stage'] == "Backlog" %}
-        {% set status_class = "grey" %}
-        {% elif concern['Stage'] == "On the platform" %}
-        {% set status_class = "green" %}
-        {% else %}
-        {% set status_class = "blue" %}
-        {% endif %}
-        <strong class="govuk-tag govuk-tag--{{ status_class }}">
-          {{ concern['Stage'] }}
-        </strong>
-      </dd>
-      <dd class="govuk-summary-list__actions">
-        {%- if concern['discussion-number'] %}
-        <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
-          See discussion</a>
-        {%- elif concern['issue-number'] %}
-          <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
-          See discussion</a>
-        {% endif -%}
-      </dd>
+      <div class="concerns-list__count__wrapper">
+        <p class="govuk-body">Showing <span class="js-accessible-list-filter__count">{{ count }}</span> planning considerations</p>
+        <span class="govuk-body govuk-!-font-weight-bold govuk-visually-hidden js-list-filter__count" aria-hidden="true">{{ count }}</span>
+      </div>
+    
+      <dl class="govuk-summary-list" data-filter="list">
+        {% for concern in concerns -%}
+        <div class="govuk-summary-list__row" data-filter="item">
+          <dt class="govuk-summary-list__key" data-filter="match-content">
+            <a href="{{ baseurl }}/what-we-are-working-on/planning-consideration/{{ concern['Concern']|slugify }}" class="govuk-link govuk-link--text-colour">{{ concern['Concern'] }}</a>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if concern['Stage'] == "Backlog" %}
+            {% set status_class = "grey" %}
+            {% elif concern['Stage'] == "On the platform" %}
+            {% set status_class = "green" %}
+            {%- elif filter == "Archived" %}
+            {%- set status_class = "orange" %}
+            {% else %}
+            {% set status_class = "blue" %}
+            {% endif %}
+            <strong class="govuk-tag govuk-tag--{{ status_class }}">
+              {{ concern['Stage'] }}
+            </strong>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            {%- if concern['discussion-number'] %}
+            <a class="govuk-link" href="{{ discussionsURL }}{{ concern['discussion-number'] }}">
+              See discussion</a>
+            {%- elif concern['issue-number'] %}
+              <a class="govuk-link" href="{{ issuesURL }}{{ concern['issue-number'] }}">
+              See discussion</a>
+            {% endif -%}
+          </dd>
+        </div>
+        {%- endfor %}
+    
+      </dl>
     </div>
-    {%- endfor %}
-
-  </dl>
+    
+    <p class="dl-list-filter__no-filter-match js-no-filter-list-matches">No planning considerations match your search term.</p>
+    
+  </div>
 </div>
-
-<p class="dl-list-filter__no-filter-match js-no-filter-list-matches">No planning considerations match your search term.</p>
 
 <div class="app-engagement-panel">
   <h2 class="govuk-heading-m app-engagement-panel__heading">Are we missing something?</h2>

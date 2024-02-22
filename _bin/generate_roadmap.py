@@ -12,6 +12,19 @@ from planningconsiderations import get_planning_considerations
 from pathlib import Path
 
 
+stages = [
+    ("Backlog", "backlog"),
+    ("Screen", "screen"),
+    ("Research", "research"),
+    ("Co-design", "co-design"),
+    ("Test and iterate", "test-and-iterate"),
+    ("Ready for go/no-go", "ready-for-go-no-go"),
+    ("Prepared for platform", "prepared-for-platform"),
+    ("On the platform", "on-the-platform"),
+    ("Archived", "archived"),
+]
+
+
 def debug_filter(thing):
     return f"<script>console.log({json.dumps(json.loads(jsonpickle.encode(thing)), indent=2)});</script>"
 
@@ -74,7 +87,6 @@ def make_id(name):
 def generate_roadmap():
     env = setup_jinja()
     concerns = get_planning_considerations()
-    count = sum([len(concerns[bucket]) for bucket in concerns.keys()])
     all_concerns = sorted(
         [concern for bucket in concerns.keys() for concern in concerns[bucket]],
         key=itemgetter("Concern"),
@@ -95,12 +107,25 @@ def generate_roadmap():
         concerns=concerns,
         emerging_priorities=emerging_priorities,
     )
+    # render the full backlog
     render(
         "./what-we-are-working-on/planning-consideration/index.html",
         backlog_template,
         concerns=all_concerns,
-        count=count,
+        count=len(all_concerns),
+        stages=stages,
     )
+    # render backlog page filtered by stage
+    for stage in concerns.keys():
+        render(
+            f"./what-we-are-working-on/planning-consideration/{stage.lower().replace(' ', '-').replace('/', '-')}/index.html",
+            backlog_template,
+            concerns=concerns[stage],
+            count=len(concerns[stage]),
+            stages=stages,
+            filter=stage,
+        )
+
     parent_dir = Path(__file__).parent.parent
     planning_considerations = Path(parent_dir, "planning-considerations")
     for concern in all_concerns:
