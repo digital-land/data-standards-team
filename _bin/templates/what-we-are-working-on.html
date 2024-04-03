@@ -2,7 +2,7 @@
 
 {% block headStart %}
 <!-- redirect to considerations app -->
-<meta http-equiv="Refresh" pageContent="0; url='https://considerations.planning-data.dev/what-we-are-working-on'" />
+<meta http-equiv="Refresh" pageContent="0; url=https://considerations.planning-data.dev/what-we-are-working-on" />
 {% endblock headStart %}
 
 {%- block stylesheets %}
@@ -99,14 +99,14 @@
       {% for concern in emerging_priorities %}
       {{ considerationListItem(concern) }}
       {% endfor %}
-    </dl> -->
+    </dl> 
+  
+  <p class="govuk-body">
+    <a href="{{ baseurl }}/what-we-are-working-on/backlog" class="govuk-link">See our full backlog of planning considerations</a>.
+  </p>-->
 
   </div>
 </div>
-
-<p class="govuk-body">
-  <a href="{{ baseurl }}/what-we-are-working-on/backlog" class="govuk-link">See our full backlog of planning considerations</a>.
-</p>
 {% endblock content %}
 
 {% block footer %}
