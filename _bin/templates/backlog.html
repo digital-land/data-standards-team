@@ -1,5 +1,10 @@
 {% extends 'digital-land-frontend/layouts/base.jinja' %}
 
+{%- block headStart %}
+<!-- redirect to considerations app -->
+<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration" />
+{% endblock headStart -%}
+
 {%- block stylesheets %}
 {{ super() }}
 <link href="/data-standards/assets/css/application.css" rel="stylesheet" />

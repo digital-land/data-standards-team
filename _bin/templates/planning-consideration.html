@@ -1,6 +1,11 @@
 {% extends 'digital-land-frontend/layouts/base.jinja' %}
 {% from "govuk_frontend_jinja/components/summary-list/macro.html" import govukSummaryList -%}
 
+{%- block headStart %}
+<!-- redirect to considerations app -->
+<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration/{{ concern['Concern']|slugify }}" />
+{% endblock headStart -%}
+
 {%- block stylesheets %}
 {{ super() }}
 <link href="/data-standards/assets/css/application.css" rel="stylesheet" />
