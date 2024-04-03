@@ -3,7 +3,7 @@
 {%- block headStart %}
 <!-- redirect to considerations app -->
 {%- if filter %}
-<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration?stage={{ filter||capitalize }}"/>
+<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration?stage={{ filter|capitalize }}"/>
 {%- else %}
 <meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration"/>
 {% endif -%}
