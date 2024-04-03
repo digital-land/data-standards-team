@@ -2,7 +2,11 @@
 
 {%- block headStart %}
 <!-- redirect to considerations app -->
-<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration" />
+{%- if filter %}
+<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration?stage={{ filter||capitalize }}"/>
+{%- else %}
+<meta http-equiv="Refresh" content="0; url=https://considerations.planning-data.dev/planning-consideration"/>
+{% endif -%}
 {% endblock headStart -%}
 
 {%- block stylesheets %}
