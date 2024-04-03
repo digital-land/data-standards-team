@@ -1,5 +1,10 @@
 {% extends 'digital-land-frontend/layouts/base.jinja' %}
 
+{% block headStart %}
+<!-- redirect to considerations app -->
+<meta http-equiv="Refresh" pageContent="0; url='https://considerations.planning-data.dev/what-we-are-working-on'" />
+{% endblock headStart %}
+
 {%- block stylesheets %}
 {{ super() }}
 <link href="/data-standards/assets/css/application.css" rel="stylesheet" />
@@ -63,8 +68,10 @@
 
     <span class="govuk-caption-xl">What we're working on</span>
     <h1 class="govuk-heading-xl">Upcoming data standards</h1>
+    
+    <p class="govuk-body">Redirect to <a href="https://considerations.planning-data.dev/what-we-are-working-on" class="govuk-link">considerations.planning-data.dev/what-we-are-working-on</a>.</p>
 
-    <p class="govuk-body">These are the planning areas we're looking at right now, and the ones we plan to work on next.</p>
+    <!-- <p class="govuk-body">These are the planning areas we're looking at right now, and the ones we plan to work on next.</p>
     <div class="govuk-body">For each planning area we will determine whether a data standard has the potential to unlock value in the planning system. If it does, we will draft a data standard to test with publishers.</div>
 
     <p class="govuk-body">We regularly ask our community to help us decide the things we need to work on and tell us what they need from the data. Read our <a href="https://github.com/digital-land/data-standards-backlog/discussions/47" class="govuk-link">code of conduct</a> to see how you can contribute.</p>
@@ -92,7 +99,7 @@
       {% for concern in emerging_priorities %}
       {{ considerationListItem(concern) }}
       {% endfor %}
-    </dl>
+    </dl> -->
 
   </div>
 </div>

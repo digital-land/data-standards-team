@@ -101,6 +101,7 @@ def generate_roadmap():
     backlog_template = env.get_template("backlog.html")
     planning_consideration_template = env.get_template("planning-consideration.html")
 
+    # changed just to produce redirect page
     render(
         "./what-we-are-working-on/index.html",
         current_work_template,
