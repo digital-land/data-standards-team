@@ -24,4 +24,4 @@ A data standard doesn’t describe how the data should be used. It is more about
 
 This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.
 
-![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/process-jan-2024-stages.png)
+![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png)
