@@ -10,6 +10,10 @@ A data standard is a formal document that defines how data should be structured,
 
 Each standard provides a set of rules and guidelines for producing and organising that data, ensuring that it can be read and understood by other systems without any confusion or errors.
 
+This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.
+
+![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png)
+
 ## What a data standard won’t do
 
 A data standard won’t in itself answer questions for you. It provides the raw ingredients to help you get the answers.
@@ -22,6 +26,3 @@ Data standards are not fixed or static, they evolve. A data standard needs to be
 
 A data standard doesn’t describe how the data should be used. It is more about how the data is organised and structured behind the scenes than how it should be presented when shown to people.
 
-This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.
-
-![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png)
