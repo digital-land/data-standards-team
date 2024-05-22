@@ -20,3 +20,8 @@ Standards help shape consistency - but can’t make any judgement in terms of ac
 
 Data standards are not fixed or static, they evolve. A data standard needs to be regularly reviewed and updated to ensure that it remains relevant and effective.
 
+A data standard doesn’t describe how the data should be used. It is more about how the data is organised and structured behind the scenes than how it should be presented when shown to people.
+
+This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.
+
+![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/process-jan-2024-stages.png)
