@@ -23,3 +23,8 @@ $dl-frontend-images-path: "#{$baseurl}/assets/govuk-frontend/assets/images/";
     @include govuk-responsive-padding(4, "top");
   }
 }
+
+.app-img {
+  margin-top: $govuk-gutter;
+  border: 1px solid $govuk-border-colour;
+}

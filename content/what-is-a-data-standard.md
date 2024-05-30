@@ -12,7 +12,7 @@ Each standard provides a set of rules and guidelines for producing and organisin
 
 This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.
 
-![This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.](https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png)
+<img class="app-img" src="https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png" alt="This diagram shows how data standards are the basis for effective digital ecosystems. Data standards support the creation of consistent, usable and valuable data. This data can then be relied on to deliver tools and services that satisfy the specific needs of a wide variety of differing users.">
 
 <p class="govuk-body govuk-!-font-size-14"><a href="https://digital-land.github.io/images/diagrams/data-standards-in-effective-digital-ecosystems.png" class="govuk-link govuk-link--text-colour">See full size version</a>.</p>
 
