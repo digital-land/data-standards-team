@@ -13,7 +13,7 @@ We think data can help governments at a local and national level achieve their g
 
 ### What we’ve done
 
-We have worked closely to understand the sorts of questions the policy teams in DLUHC would like to answer. This gives us a set of user or data needs to work with.
+We have worked closely to understand the sorts of questions the policy teams in MHCLG would like to answer. This gives us a set of user or data needs to work with.
 
 Using those we have drafted [an initial data model](https://miro.com/app/board/uXjVNIiMA2Y=/) that we think would satisfy the needs.
 
