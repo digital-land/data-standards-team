@@ -6,7 +6,7 @@ layout: content-page
 
 # {{ page.title }}
 
-These principles are for the community of people that create and contribute to the work on the Digital Land project run by the Department for Levelling Up, Housing and Communities (DLUHC).
+These principles are for the community of people that create and contribute to the work on the Digital Land project run by the Ministry of Housing, Communities & Local Government (MHCLG).
 
 ## 1. Start with what exists
 

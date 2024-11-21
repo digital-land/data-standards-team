@@ -8,7 +8,7 @@ layout: content-page
 
 ## Background and purpose
 
-The Department for Levelling Up, Housing and Communities is developing data standards to make land and housing data easier to find, understand, use and trust. 
+The Ministry of Housing, Communities & Local Goverment is developing data standards to make land and housing data easier to find, understand, use and trust. 
 
 We believe this will lead to: 
 * better planning decisions 
@@ -36,7 +36,7 @@ We publish details of [what we’re working on](https://digital-land.github.io/d
 We’ll set up a collaborative space for more focused input from LPAs and anyone else that should be involved. This will probably be a Miro or Mural board. We also have open
 [Github discussions](https://github.com/digital-land/data-standards-backlog/discussions) for sharing our progress and asking questions to the community.
 
-To get in touch with our team, just drop [Matt Lucht](matt.lucht1@levellingup.gov.uk) an email.
+To get in touch with our team, just drop [Matt Lucht](matt.lucht1@communities.gov.uk) an email.
 
 ## What we need from you
 One of the most important things we need to help you with your data standards is support understanding the domain/subject/planning policy area.
